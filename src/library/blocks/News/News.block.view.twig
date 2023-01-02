@@ -1,0 +1,15 @@
+<section class="b-News">
+	<div class="b-News__pages">
+		<div class="b-News__pages-page">
+			<div class="b-News__pages-page-container">
+				{% for post in posts %}
+					{% include "modules/NewsCard/NewsCard.module.twig" %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="b-News__buttons">
+		<a href="{{posts.pagination.prev.link}}" class="b-News__buttons-item {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Previous page</a>
+		<a href="{{posts.pagination.next.link}}" class="b-News__buttons-item b-News__buttons-item--blue {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next page</a>
+	</div>
+</section>

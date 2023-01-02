@@ -1,0 +1,159 @@
+.b-Welcome
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-color: $black
+    margin-bottom: 101px
+
+    &__title
+        width: 83%
+        display: flex
+        justify-content: space-between
+        gap: 40px
+        +max($bp-xxlg)
+            margin-bottom: 85px
+        +max($bp-sm)
+            margin: 0
+            flex-direction: column-reverse
+
+        &-text
+            display: flex
+            flex-direction: column
+            gap: 25px
+            color: $white
+            +max($bp-sm)
+                margin-bottom: 50px
+            +max($bp-xs)
+                margin-bottom: 45px
+
+            &-small
+                font-weight: 400
+                font-size: 17px
+                line-height: 23px
+
+            &-big
+                font-weight: 700
+                font-size: 60px
+                line-height: 82px
+                +max($bp-sm)
+                    width: 100%
+                    +fslh(30, 41)
+                    // +fslh(30, 41)
+
+            &-button
+                width: 197px
+                text-align: center
+                padding: 11px 51px
+                background: $blue
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16)
+                border-radius: 6px
+                font-weight: 600
+                +fslh(14, 19)
+                color: $white
+                text-decoration: none
+
+                &:hover
+                    background: $grey
+                    color: $black
+                    cursor: pointer
+                    transition: all 0.3s ease-in-out
+
+                &:active
+                    background: $blue
+                    color: $white
+
+        &-image
+            width: 39.947916666666664vw
+            height: auto
+            +max($bp-sm)
+                width: 82vw
+
+    &__program
+        width: 100%
+        display: flex
+        justify-content: center
+        z-index: 1
+        gap: 7.239583333333333vw
+        +max($bp-sm)
+            display: none
+
+        &--gap
+            top: 215px
+            gap: 73vw
+
+        &-image
+            filter: drop-shadow(0px 24px 34px rgba(0, 0, 0, 0.11))
+            border-radius: 5px
+            width: 1150px
+            +max($bp-lg)
+                width: 100vw
+
+        &-square
+            width: 70px
+            height: 70px
+            background: $blue
+            border-radius: 6px
+            position: relative
+            top: 215px
+            +max(1630px)
+                display: none
+
+            &--big
+                width: 138px
+                height: 138px
+                top: 70px
+
+    &__image
+        width: 100%
+        height: auto
+        position: absolute
+        box-shadow: 0px 300px 0px 8px $white
+        +max($bp-xxlg)
+            box-shadow: 0px 280px 0px 140px $white
+        +max($bp-lg)
+            box-shadow: 0px 400px 0px 250px $white
+        +max($bp-sm)
+            position: static
+            height: auto
+            box-shadow: 0px 10px 0 0px $white
+
+        &--boxshadow
+            position: static
+            box-shadow: none
+
+    &__whatWeDo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        gap: 52px
+        width: 100%
+        padding-top: 160px
+        color: $black
+        background: $white
+        +max($bp-xxlg)
+            position: relative
+            box-shadow: none
+        +max($bp-sm)
+            padding-top: 30px
+
+        &-big-text
+            width: 857px
+            font-weight: 700
+            font-size: 60px
+            line-height: 82px
+            +max($bp-sm)
+                width: 83%
+                +fslh(30, 41)
+
+        &-small-text
+            width: 857px
+            font-weight: 400
+            font-size: 20px
+            line-height: 35px
+            +max($bp-sm)
+                width: 83%
+                +fslh(18, 30)

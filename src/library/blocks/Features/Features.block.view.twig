@@ -1,0 +1,56 @@
+<section class="b-Features" id="Tofeature">
+	<img class="b-Features__image" src="{{theme.link}}/static/img/WAVE-gray.svg" width="1920" height="295.67" alt="WAVE-gray">
+	<div class="b-Features__container">
+		<h1 class="b-Features__title">{{fields.title}}</h1>
+
+		<div class="b-Features__navigation">
+			<div class="b-Features__navigation-rectangle"></div>
+			<ul class="b-Features__navigation-list">
+				{% for item in nav.features.items %}
+					<li><a class="b-Features__navigation-list-item" href="{{item.url}}">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+			<div class="b-Features__navigation-rectangle"></div>
+		</div>
+
+		{% if fields.feature %}
+			{% for item in fields.feature %}
+					{% if loop.index % 2 == 0 %}
+						<div class="b-Features__feature b-Features__feature--white" id="Tofeature{{loop.index}}">
+							<div class="b-Features__feature-contents b-Features__feature-contents--reverse">
+								<div class="b-Features__feature-title">{{item.title}}</div>
+								<div class="b-Features__feature-container b-Features__feature-container--reverse">
+									<div class="b-Features__feature-container-list">
+										{% for list in item.list %}
+											<div class="b-Features__feature-container-list-item">
+												<img class="b-Features__feature-container-list-item-image" src="{{theme.link}}/static/img/check-gray.svg" width="31" height="31" alt="Check">
+												{{list.text}}
+											</div>
+										{% endfor %}
+									</div>
+									<img class="b-Features__feature-container-image" src="{{item.image}}" width="800" height="483" alt="Feature_Manage">
+								</div>
+							</div>
+						</div>
+					{% else %}
+						<div class="b-Features__feature" id="Tofeature{{loop.index}}">
+							<div class="b-Features__feature-contents">
+								<div class="b-Features__feature-title">{{item.title}}</div>
+								<div class="b-Features__feature-container">
+									<div class="b-Features__feature-container-list">
+										{% for list in item.list %}
+											<div class="b-Features__feature-container-list-item">
+												<img class="b-Features__feature-container-list-item-image" src="{{theme.link}}/static/img/check-gray.svg" width="31" height="31" alt="Check">
+												{{list.text}}
+											</div>
+										{% endfor %}
+									</div>
+									<img class="b-Features__feature-container-image" src="{{item.image}}" width="800" height="483" alt="Feature_Manage">
+								</div>
+							</div>
+						</div>
+					{% endif %}
+			{% endfor %}
+		{% endif %}
+	</div>
+</section>

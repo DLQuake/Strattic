@@ -1,0 +1,20 @@
+{% if fields.title and fields.client and fields.button %}
+    <section class="b-Clients">
+        <h1 class="b-Clients__title">{{fields.title}}</h1>
+
+        <div class="b-Clients__client">
+            {% for item in fields.client %}
+                <div class="b-Clients__client-item">
+                    <img src="{{item.image}}" width="100" height="100" alt="agencies">
+                    <h1 class="b-Clients__client-item-title">{{item.title}}</h1>
+                    <p class="b-Clients__client-item-text">{{item.text}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a class="b-Clients__button" href="#Toreferences">{{fields.button}}</a>
+
+        <div class="b-Clients__rectangle"></div>
+    </section>
+{% endif %}
+
