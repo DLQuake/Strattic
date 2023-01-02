@@ -20,7 +20,7 @@ $loader->setTempDirectory(get_stylesheet_directory() . '/app/temp');
 $loader->register(); // Run the RobotLoader
 
 global $slug;
-$slug = 'pas';
+$slug = 'Strattic';
 
 $config = [];
 
