@@ -1,30 +1,11 @@
 {
-    "key": "group_632aed0736322",
-    "title": "Block AboutUs",
+    "key": "group_63bbf71b0fbca",
+    "title": "Block Quote Clients",
     "fields": [
         {
-            "key": "field_632aee2a00d35",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6331761ccaa66",
-            "label": "AboutUs",
-            "name": "aboutus",
+            "key": "field_63bbf739e3884",
+            "label": "Quote",
+            "name": "quote",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -41,9 +22,9 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_63317640caa67",
-                    "label": "Text",
-                    "name": "text",
+                    "key": "field_63bbf806e3885",
+                    "label": "Content",
+                    "name": "content",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -56,9 +37,9 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_633176e3caa6c",
-                            "label": "Big",
-                            "name": "big",
+                            "key": "field_63bbf850e3887",
+                            "label": "Text",
+                            "name": "text",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -75,9 +56,9 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_633176eacaa6d",
-                            "label": "Small",
-                            "name": "small",
+                            "key": "field_63bbf856e3888",
+                            "label": "Author",
+                            "name": "author",
                             "type": "group",
                             "instructions": "",
                             "required": 0,
@@ -90,10 +71,10 @@
                             "layout": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_633176f6caa6e",
-                                    "label": "Bold",
-                                    "name": "bold",
-                                    "type": "text",
+                                    "key": "field_63bbf867e3889",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "type": "image",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -102,17 +83,22 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "return_format": "url",
+                                    "preview_size": "full",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
                                 },
                                 {
-                                    "key": "field_633176fccaa6f",
-                                    "label": "Normal",
-                                    "name": "normal",
-                                    "type": "text",
+                                    "key": "field_63bbf876e388a",
+                                    "label": "Data",
+                                    "name": "data",
+                                    "type": "group",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -121,18 +107,54 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_63bbf88de388b",
+                                            "label": "PersonName",
+                                            "name": "personname",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_63bbf8a3e388c",
+                                            "label": "CompanyName",
+                                            "name": "companyname",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "key": "field_6331768dcaa6b",
+                    "key": "field_63bbf839e3886",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -163,7 +185,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/aboutus"
+                "value": "acf\/quote-clients"
             }
         ]
     ],
@@ -176,5 +198,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664186166
+    "modified": 1673263486
 }

@@ -1,12 +1,12 @@
 {
-    "key": "group_6333edeaaa7bb",
-    "title": "Block Contact",
+    "key": "group_63bc0cb1a51cb",
+    "title": "Block Learn More",
     "fields": [
         {
-            "key": "field_6333ef516e72d",
+            "key": "field_63bc0cbddeebc",
             "label": "Title",
             "name": "title",
-            "type": "group",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,52 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_6333ef5c6e72e",
-                    "label": "Big",
-                    "name": "big",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6333ef626e72f",
-                    "label": "Small",
-                    "name": "small",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_6333fc767d1d7",
-            "label": "Select",
-            "name": "select",
+            "key": "field_63bc0ccddeebd",
+            "label": "Cards",
+            "name": "cards",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -77,10 +41,10 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_6333fe01bed07",
-                    "label": "Option",
-                    "name": "option",
-                    "type": "text",
+                    "key": "field_63bc0d06deebf",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -89,33 +53,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
-            "key": "field_6333efd48e211",
-            "label": "Politics",
-            "name": "politics",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
+                    "return_format": "url",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
                 {
-                    "key": "field_6333efe48e212",
-                    "label": "Text",
-                    "name": "text",
+                    "key": "field_63bc0d15deec0",
+                    "label": "BigText",
+                    "name": "bigtext",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -132,9 +84,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6333efec8e213",
-                    "label": "Link",
-                    "name": "link",
+                    "key": "field_63bc0d20deec1",
+                    "label": "SmallText",
+                    "name": "smalltext",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -149,14 +101,29 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_63bc1cf94f6c7",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
                 }
             ]
         },
         {
-            "key": "field_6333effa9f7c7",
-            "label": "Button",
-            "name": "button",
-            "type": "text",
+            "key": "field_63bc0ce8deebe",
+            "label": "StartHosting",
+            "name": "starthosting",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -165,11 +132,43 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63bc0d71deec3",
+                    "label": "BigText",
+                    "name": "bigtext",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_63bc0d7bdeec4",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
+                }
+            ]
         }
     ],
     "location": [
@@ -177,7 +176,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/contact"
+                "value": "acf\/learnmore"
             }
         ]
     ],
@@ -190,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664355759
+    "modified": 1673273019
 }

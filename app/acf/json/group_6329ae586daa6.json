@@ -3,28 +3,9 @@
     "title": "Block Benefits",
     "fields": [
         {
-            "key": "field_632b01614f01e",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_63317acacba22",
-            "label": "Slide",
-            "name": "slide",
+            "label": "Benefits",
+            "name": "benefits",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -65,10 +46,10 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_63317ae7cba24",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "text",
+                    "key": "field_63bbe33db744b",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -77,11 +58,98 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63bbe15fcc49b",
+                            "label": "BigText",
+                            "name": "bigtext",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63bbe167cc49c",
+                            "label": "SmallText",
+                            "name": "smalltext",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63bbe16ecc49d",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_63bbe5c197e69",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url"
+                                },
+                                {
+                                    "key": "field_63bbe5d397e6a",
+                                    "label": "linktext",
+                                    "name": "linktext",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
@@ -104,5 +172,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664187435
+    "modified": 1673258464
 }

@@ -18,9 +18,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_6332b905d8703",
-                    "label": "SmallText",
-                    "name": "smalltext",
+                    "key": "field_6332b912d8704",
+                    "label": "BigText",
+                    "name": "bigtext",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -37,9 +37,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6332b912d8704",
-                    "label": "BigText",
-                    "name": "bigtext",
+                    "key": "field_6332b905d8703",
+                    "label": "SmallText",
+                    "name": "smalltext",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -102,32 +102,8 @@
         },
         {
             "key": "field_632ac07b7e41b",
-            "label": "Dashboard_program",
-            "name": "dashboard_program",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "full",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_632ac4ec2b002",
-            "label": "WhatWeDo",
-            "name": "whatwedo",
+            "label": "Partners",
+            "name": "partners",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -140,9 +116,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_6332b9d9cb608",
-                    "label": "BigText",
-                    "name": "bigtext",
+                    "key": "field_63b578eac3943",
+                    "label": "Text",
+                    "name": "text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -159,10 +135,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6332b9dccb609",
-                    "label": "SmallText",
-                    "name": "smalltext",
-                    "type": "text",
+                    "key": "field_63b578f7c3944",
+                    "label": "partner",
+                    "name": "partner",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -171,11 +147,37 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_63b57908c3945",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "full",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -198,5 +200,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664268831
+    "modified": 1672837429
 }
