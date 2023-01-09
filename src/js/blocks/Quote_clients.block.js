@@ -1,8 +1,8 @@
 import $ from 'jquery';
-const Benefits = {
+const Quote_clients = {
   settings: {
-    target: '.b-Benefits',
-    slider: '.b-Benefits__slider',
+    target: '.b-Quote_clients',
+    slider: '.b-Quote_clients__slider',
   },
   init(args) {
     this.settings = $.extend(true, this.settings, args);
@@ -26,11 +26,6 @@ const Benefits = {
   },
   initSwiper() {
     const swiper = new Swiper(this.$target.slider[0], {
-      slidesPerView: 5,
-      spaceBetween: 30,
-      slidesPerGroup: 4,
-      mousewheel: true,
-
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -39,4 +34,4 @@ const Benefits = {
     })
   },
 };
-export default Benefits;
+export default Quote_clients;
