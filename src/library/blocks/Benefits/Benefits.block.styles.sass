@@ -1,76 +1,90 @@
 .b-Benefits
     width: 100%
+    display: flex
+    flex-direction: column
+    gap: 141px
+    margin: 145px 0
 
-    &__image
-        width: 100%
-        height: auto
-        position: relative
-        top: 6px
-
-    &__container
+    &__flex
         display: flex
-        flex-direction: column
-        justify-content: center
+        flex-direction: row
         align-items: center
-        gap: 70px
-        background: #283C43
-        padding: 100px
-        +max($bp-xxs)
-            padding: 100px 10px
-
-    &__title
-        font-weight: 700
-        font-size: 60px
-        line-height: 82px
-        text-align: center
-        color: $white
-        +max($bp-xxs)
-            font-size: 10vw
-            line-height: 41px
-
-    &__slider
-        width: 100%
-
-        &-slide
-            width: 316px !important
-            border: 1px solid #374F57
-            border-radius: 6px
-            display: flex
-            flex-direction: column
+        justify-content: center
+        gap: 166px
+        +max($bp-sm)
+            flex-direction: column-reverse
+            align-items: center
             justify-content: center
-            gap: 84px
-            padding: 49px 130px 37px 40px
-            transition: all 0.3s ease-in-out !important
-            +max($bp-xxs)
-                width: 10px !important
-                height: 250px !important
 
-            &:hover
-                cursor: pointer
-                background: #31464E
+        &--reverse
+            flex-direction: row-reverse
+            +max($bp-sm)
+                flex-direction: column
+                align-items: center
+                justify-content: center
 
-            &-image
-                width: 35px
-                height: 35px
+        &-text
+            width: 489px
+            height: auto
+            display: flex
+            justify-content: center
+            flex-direction: column
+            gap: 30px
+            +max($bp-sm)
+                width: 70vw
+                gap: 20px
 
-            &-text
-                width: 220px
+            &-big
+                font-family: $font-secondary
+                width: 496px
                 font-weight: 600
-                font-size: 23px
-                line-height: 30px
-                color: $white
-                +max($bp-xxs)
+                font-size: 48px
+                line-height: 130%
+                color: #000000
+                +max($bp-xxlg)
                     width: 100%
-                    font-size: 4vw
-                    line-height: 5vw
 
+            &-small
+                font-family: $font-secondary
+                font-weight: 400
+                font-size: 20px
+                line-height: 35px
+                color: $black
+                display: flex
+                flex-direction: column
+                gap: 30px
 
-        &-pagination
-            position: relative !important
-            bottom: 0
-            margin-top: 48px
+                &--bold
+                    font-weight: 700
 
-.swiper-pagination-bullet
-    width: 12px !important
-    height: 12px !important
-    margin: 10px !important
+            &-link
+                width: 235px
+                padding: 13px 30px
+                font-weight: 600
+                font-size: 16px
+                line-height: 22px
+                letter-spacing: -0.01em
+                text-align: center
+                color: #FFFFFF
+                background: $red
+                border-radius: 8px
+                text-decoration: none
+
+        &-image
+            height: auto
+            background: #F5F9FB
+            border-radius: 8px
+            padding: 57px 129px
+            +max($bp-xxlg)
+                padding: 20px
+            +max(920px)
+                width: 40vw
+
+            &--nobackground
+                background: none
+                padding: 0
+                border-radius: 0
+                +max($bp-xxlg)
+                    width: 477px
+                +max(920px)
+                    width: 40vw

@@ -1,0 +1,28 @@
+<section class="b-Quote_clients">
+	<div class="b-Quote_clients__slider swiper">
+		<div class="b-Quote_clients__slider-wrapper swiper-wrapper">
+			{% for slide in fields.quote %}
+				<div class="b-Quote_clients__slider-slide swiper-slide">
+					<div class="b-Quote_clients__slider-slide-content">
+						<p class="b-Quote_clients__slider-slide-content-text">{{slide.content.text}}</p>
+						<div class="b-Quote_clients__slider-slide-content-author">
+							<div class="b-Quote_clients__slider-slide-content-author-imagegrey">
+								<div class="b-Quote_clients__slider-slide-content-author-imagewhite">
+									<img class="b-Quote_clients__slider-slide-content-author-image" src="{{slide.content.author.icon}}" width="32" height="32" alt="icon">
+								</div>
+							</div>
+							<div class="b-Quote_clients__slider-slide-content-author-data">
+								<p class="b-Quote_clients__slider-slide-content-author-data-personname">{{slide.content.author.data.personname}}</p>
+								<p class="b-Quote_clients__slider-slide-content-author-data-companyname">{{slide.content.author.data.companyname}}</p>
+							</div>
+						</div>
+					</div>
+					<div class="b-Quote_clients__slider-slide-image">
+						<img class="b-Quote_clients__slider-slide-image" src="{{slide.image}}" width="323" height="323" alt="image">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="b-Quote_clients__slider-pagination swiper-pagination"></div>
+	</div>
+</section>

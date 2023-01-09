@@ -1,39 +1,30 @@
 <div class="b-Welcome">
 	<div class="b-Welcome__title">
 		<div class="b-Welcome__title-text">
-			<div class="b-Welcome__title-text-small">{{fields.title.smalltext}}</div>
 			<div class="b-Welcome__title-text-big">{{fields.title.bigtext}}</div>
+			<div class="b-Welcome__title-text-small">{{fields.title.smalltext}}</div>
 			{% if fields.title.button %}
 				<a class="b-Welcome__title-text-button" id="feature0" href="#Tofeature">{{fields.title.button}}</a>
 			{% endif %}
 		</div>
 		{% if fields.title.image %}
 			<div class="b-Welcome__title-image">
-				<img class="b-Welcome__title-image" src="{{fields.title.image}}" width="767" height="630.66" alt="laptop">
+				<img class="b-Welcome__title-image" src="{{fields.title.image}}" width="574" height="510.68" alt="laptop">
 			</div>
 		{% endif %}
 	</div>
 
-	{% if fields.dashboard_program and fields.whatwedo %}
-		<div class="b-Welcome__program">
-			<div class="b-Welcome__program-square"></div>
-			<div class="b-Welcome__program-image">
-				<img class="b-Welcome__program-image" src="{{fields.dashboard_program}}" width="1150" height="726" alt="Dashboard">
+	{% if fields.partners %}
+		<div class="b-Welcome__partners">
+			<div class="b-Welcome__partners-title">
+				<div class="b-Welcome__partners-title-text">{{fields.partners.text}}</div>
+				<div class="b-Welcome__partners-title-rectangle"></div>
 			</div>
-			<div class="b-Welcome__program-square b-Welcome__program-square--big"></div>
+			<div class="b-Welcome__partners-images">
+				{% for image in fields.partners.partner %}
+					<img class="b-Welcome__partners-images-image" src="{{image.image}}" alt="image">
+				{% endfor %}
+			</div>
 		</div>
-
-		<img class="b-Welcome__image" src="{{theme.link}}/static/img/WAVE-white.svg" width="1920" height="295.67" alt="WAVE-white">
-
-		<div class="b-Welcome__whatWeDo">
-			<div class="b-Welcome__whatWeDo-big-text">{{fields.whatwedo.bigtext}}</div>
-			<div class="b-Welcome__whatWeDo-small-text">{{fields.whatwedo.smalltext}}</div>
-		</div>
-	{% else %}
-		<div class="b-Welcome__program b-Welcome__program--gap">
-			<div class="b-Welcome__program-square"></div>
-			<div class="b-Welcome__program-square b-Welcome__program-square--big"></div>
-		</div>
-		<img class="b-Welcome__image b-Welcome__image--boxshadow" src="{{theme.link}}/static/img/WAVE-white.svg" width="1920" height="295.67" alt="WAVE-white">
 	{% endif %}
 </div>

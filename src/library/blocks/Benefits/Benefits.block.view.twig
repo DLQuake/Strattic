@@ -1,20 +1,23 @@
-{% if fields.title and fields.slide %}
-	<section class="b-Benefits">
-		<img class="b-Benefits__image" src="{{theme.link}}/static/img/WAVE-black.svg" width="1920" height="295.67" alt="WAVE-black">
-		<div class="b-Benefits__container">
-			<h1 class="b-Benefits__title">{{fields.title}}</h1>
-
-			<div class="b-Benefits__slider swiper">
-				<div class="b-Benefits__slider-wrapper swiper-wrapper">
-					{% for item in fields.slide %}
-						<div class="b-Benefits__slider-slide swiper-slide">
-							<img class="b-Benefits__slider-slide-image" src="{{item.image}}" width="35" height="35" alt="chart">
-							<p class="b-Benefits__slider-slide-text">{{item.text}}</p>
-						</div>
-					{% endfor %}
+<section class="b-Benefits">
+	{% for item in fields.benefits %}
+		{% if loop.index % 2 == 0 %}
+			<div class="b-Benefits__flex b-Benefits__flex--reverse">
+				<div class="b-Benefits__flex-text">
+					<h1 class="b-Benefits__flex-text-big">{{item.content.bigtext}}</h1>
+					<p class="b-Benefits__flex-text-small">{{item.content.smalltext}}</p>
+					<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
 				</div>
-				<div class="b-Benefits__slider-pagination swiper-pagination"></div>
+				<img class="b-Benefits__flex-image b-Benefits__flex-image--nobackground" src="{{item.image}}" width="618" height="561" alt="ilustration">
 			</div>
-		</div>
-	</section>
-{% endif %}
+		{% else %}
+			<div class="b-Benefits__flex">
+				<div class="b-Benefits__flex-text">
+					<h1 class="b-Benefits__flex-text-big">{{item.content.bigtext}}</h1>
+					<p class="b-Benefits__flex-text-small">{{item.content.smalltext}}</p>
+					<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
+				</div>
+				<img class="b-Benefits__flex-image b-Benefits__flex-image--nobackground" src="{{item.image}}" width="618" height="561" alt="ilustration">
+			</div>
+		{% endif %}
+	{% endfor %}
+</section>

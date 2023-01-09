@@ -1,0 +1,78 @@
+.b-Quote_clients
+    width: 100%
+    background-color: $grey
+    padding: 100px 0
+
+    &__slider
+        width: 100%
+        &-slide
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100% !important
+            gap: 114px
+
+            &-content
+                width: 754px
+                display: flex
+                flex-direction: column
+                gap: 32px
+
+                &-text
+                    font-weight: 400
+                    font-size: 24px
+                    line-height: 160%
+
+                &-author
+                    display: flex
+                    align-items: center
+                    gap: 12px
+
+                    &-imagegrey
+                        background: rgba(227, 225, 226, 0.21)
+                        width: 80px
+                        height: 80px
+                        border-radius: 100%
+                        display: grid
+                        place-items: center
+                    &-imagewhite
+                        background: $white
+                        width: 56px
+                        height: 56px
+                        border-radius: 100%
+                        display: grid
+                        place-items: center
+
+                    &-data
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+
+                        &-personname
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 180%
+
+                        &-companyname
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 180%
+                            background: radial-gradient(49.69% 121.31% at 24.53% 82.01%, #1F2742 0%, #2F395A 100%)
+                            -webkit-background-clip: text
+                            -webkit-text-fill-color: transparent
+                            background-clip: text
+                            text-fill-color: transparent
+
+            &-image
+                border-radius: 100%
+
+        &-pagination
+            position: relative !important
+            bottom: 0
+            margin-top: 48px
+
+.swiper-pagination-bullet
+    background: linear-gradient(89.78deg, #FB6165 -0.52%, $red 100.22%)
+    width: 12px !important
+    height: 12px !important
+    margin: 10px !important

@@ -1,6 +1,6 @@
 <?php
 
-function acf_block_render_callback_References($block)
+function acf_block_render_callback_Quote_clients($block)
 {
     $slug = str_replace('acf/', '', $block['name']);
 
@@ -8,5 +8,5 @@ function acf_block_render_callback_References($block)
     $context['block'] = $block;
     $context['fields'] = get_fields();
 
-    Timber::render('./References.block.view.twig', $context);
+    Timber::render('./Quote_clients.block.view.twig', $context);
 }

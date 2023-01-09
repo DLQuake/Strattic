@@ -1,0 +1,36 @@
+<section class="b-LearnMore">
+	<h1 class="b-LearnMore__title">{{fields.title}}</h1>
+
+	<div class="b-LearnMore__cards">
+		{% for item in fields.cards %}
+			<div class="b-LearnMore__cards-card">
+				<div class="b-LearnMore__cards-card-imageBlue">
+					<img class="b-LearnMore__cards-card-image" src="{{item.icon}}" width="24" height="24" alt="ilustration">
+				</div>
+				<h1 class="b-LearnMore__cards-card-bigtext">{{item.bigtext}}</h1>
+				<p class="b-LearnMore__cards-card-smalltext">{{item.smalltext}}</p>
+				<a class="b-LearnMore__cards-card-link" href="{{item.link}}">
+					Learn more
+					<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_1_1267)">
+							<path d="M0.499023 7.5H12.499" stroke="#FB4247" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M8.49902 3.5L12.499 7.5L8.49902 11.5" stroke="#FB4247" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_1_1267">
+								<rect width="16" height="16" fill="white" transform="translate(-0.000976562)"/>
+							</clipPath>
+						</defs>
+					</svg>
+
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="b-LearnMore__starthosting">
+		<h1 class="b-LearnMore__starthosting-text">{{fields.starthosting.bigtext}}</h1>
+		<a class="b-LearnMore__starthosting-link" href="{{item.starthosting.link}}">Try for free!</a>
+	</div>
+
+</section>
