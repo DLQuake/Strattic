@@ -20,8 +20,14 @@
 			flex-wrap: nowrap
 			gap: 0
 
+		&-left, &-right
+			display: flex
+			justify-content: space-between
+			align-items: center
+			gap: 20px
+
+
 	&__logo
-		// display: block
 		+max($bp-xxs)
 			width: 120px
 
@@ -56,10 +62,9 @@
 
 	&__link
 		font-size: 18px
-		padding: 10px 30px
+		padding: 13px 26px
 		color: $white
 		text-decoration: none
-		border: 1px solid $white
 		border-radius: 5px 6px 6px 6px
 		+max($bp-sm)
 			display: none
@@ -69,9 +74,11 @@
 			color: $white
 			transition: all 0.3s ease-in-out
 
+		&--red
+			background: $red
+
 	&__rectangle
-		width: 85.41666666666667vw
-		height: 1px
-		background: $white
-		opacity: 0.2
-		border-radius: 0px 0px 5px 5px
+		width: 32px
+		height: 0px
+		border: 1px solid rgba(219, 214, 216, 0.1)
+		transform: rotate(-90deg)

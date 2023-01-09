@@ -1,106 +1,150 @@
 .m-FooterPrimary
-  background-color: $other-black
-  width: 100%
-  padding: 119px 117px
-  +max($bp-md)
-    padding-left: 0px
-    padding-right: 0px
+	background-color: $black
+	width: 100%
+	padding: 119px 117px
+	+max($bp-md)
+		padding-left: 0px
+		padding-right: 0px
 
-  &__navigation
-    width: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    gap: 53px
-    +max($bp-md)
-      padding-left: 80px
-      padding-right: 80px
+	&__form
+		padding: 57px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
 
-    &-container
-      display: flex
-      justify-content: space-between
-      flex-wrap: wrap
-      align-items: center
-      width: 85.41666666666667vw
-      +max($bp-md)
-        gap: 40px
+		&-title
+			font-weight: 600
+			font-size: 42px
+			line-height: 130%
+			color: $white
 
-    &-menu
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
-      gap: 40px
-      .m-Button
-        width: 180px
-        padding-left: 8px
-        padding-right: 8px
+		&-input
+			display: flex
+			gap: 10px
 
-      +max($bp-sm)
-        justify-content: flex-start
+			&-email
+				width: 336px
+				height: 56px
+				padding: 17px 32px
+				border: 1px solid #DBD6D8
+				border-radius: 10px
+				color: #000000
+				font-weight: 500
+				font-size: 16px
+				line-height: 22px
 
-    &-link
-      font-size: 18px
-      padding: 10px 30px
-      color: $white
-      text-decoration: none
-      border: 1px solid $white
-      border-radius: 5px 6px 6px 6px
+				&::placeholder
+					color: #000000
+					font-weight: 500
+					font-size: 16px
+					line-height: 22px
 
-      &:hover
-        background: $blue
-        color: $white
-        transition: all 0.3s ease-in-out
+			&-submit
+				padding: 17px 44px
+				font-weight: 600
+				font-size: 16px
+				line-height: 22px
+				text-align: center
+				letter-spacing: -0.01em
+				border: none
+				border-radius: 10px
+				color: $white
+				background: $red
 
-    &-rectangle
-      width: 85.41666666666667vw
-      height: 1px
-      background: $white
-      opacity: 0.2
-      border-radius: 0px 0px 5px 5px
+	&__navigation
+		width: 100%
+		display: flex
+		align-items: center
+		gap: 278px
+		+max($bp-md)
+			padding-left: 80px
+			padding-right: 80px
 
-  &__data
-    padding: 57px 0 0 0
-    display: flex
-    justify-content: space-between
-    align-items: center
-    +max($bp-md)
-      padding: 57px 80px
-    +max($bp-sm)
-      width: 100%
-      justify-content: flex-start
-      align-items: flex-start
-      flex-direction: column-reverse
-      gap: 29px
-      padding-left: 60px
-      padding-right: 60px
+		&-title
+			display: flex
+			font-weight: 600
+			font-size: 20px
+			line-height: 130%
+			color: $white
+			margin-bottom: 24px
 
-    &-copyrithing
-      font-weight: 400
-      font-size: 16px
-      line-height: 22px
-      color: $white
-      opacity: 0.4
+		&-menu
+			display: flex
+			flex-direction: column
+			justify-content: space-between
 
-    &-socials
-      display: flex
-      gap: 6px
+			&-item
+				color: $other_grey !important
 
-      &-item
-        display: flex
-        align-items: center
-        justify-content: center
-        color: $white
-        width: 50px
-        height: 50px
-        background: #304248
-        border-radius: 50%
-        text-decoration: none
+			+max($bp-sm)
+				justify-content: flex-start
 
-        &:hover
-          background-color: $blue
-          transition: all 0.3s ease-in-out
+		&-link
+			font-size: 18px
+			padding: 10px 30px
+			color: $white
+			text-decoration: none
+			border: 1px solid $white
+			border-radius: 5px 6px 6px 6px
 
-        &-image
-          width: 30px
-          height: 30px
+			&:hover
+				background: $blue
+				color: $white
+				transition: all 0.3s ease-in-out
+
+		&-rectangle
+			margin-top: 79px
+			width: 88.41666666666667vw
+			height: 1px
+			background: $white
+			opacity: 0.2
+			border-radius: 0px 0px 5px 5px
+
+	&__data
+		padding: 57px 0 0 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+max($bp-md)
+			padding: 57px 80px
+		+max($bp-sm)
+			width: 100%
+			justify-content: flex-start
+			align-items: flex-start
+			flex-direction: column-reverse
+			gap: 29px
+			padding-left: 60px
+			padding-right: 60px
+
+		&-copyrithing
+			display: flex
+			justify-content: center
+			align-items: center
+			gap: 5px
+			font-family: $font-secondary
+			font-weight: 400
+			font-size: 16px
+			line-height: 180%
+			color: $white
+
+		&-socials
+			display: flex
+			gap: 6px
+
+			&-item
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				background: $other_black
+				border-radius: 50%
+				text-decoration: none
+
+				&:hover
+					background-color: $blue
+					transition: all 0.3s ease-in-out
+
+				&-image
+					width: 16px
+					height: 16px
