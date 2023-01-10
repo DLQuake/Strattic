@@ -10,11 +10,30 @@
 			<ul class="m-HeaderPrimary__menu -desktop">
 				{% for item in nav.primary.items %}
 					<li class="m-HeaderPrimary__item">
-						{% include "modules/Button/Button.module.twig" with {
-							type: "link",
-							link: item.link,
-							text: item.title
-						}%}
+						{% if item.children %}
+							{% include "modules/Button/Button.module.twig" with {
+								type: "link",
+								link: item.link,
+								text: item.title
+							}%}
+							<ul class="m-HeaderPrimary__drop">
+								{% for child in item.children %}
+									<li class="m-HeaderPrimary__childItem">
+										{% include "modules/Button/Button.module.twig" with {
+											type: "link",
+											link: child.link,
+											text: child.title
+										}%}
+									</li>
+								{% endfor %}
+							</ul>
+						{% else %}
+							{% include "modules/Button/Button.module.twig" with {
+								type: "link",
+								link: item.link,
+								text: item.title
+							}%}
+						{% endif %}
 					</li>
 				{% endfor %}
 			</ul>

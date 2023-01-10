@@ -13,9 +13,13 @@
   cursor: pointer
   transition: background-color 0.2s linear
   &:hover
-    color: $blue
+    color: $red
     transition: all 0.3s ease-in-out
     +max($bp-sm)
       background-color: $white
   +max($bp-sm)
     +fslh(15, 25)
+
+  &.-black
+    background-color: $white
+    color: #000000
