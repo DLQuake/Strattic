@@ -33,18 +33,19 @@
             padding: 40px
 
             &:hover
-                cursor: pointer
                 box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
                 transition: all 0.3s ease-in-out
 
             &-imageBlue
                 width: 64px
-                height: 64px
-                display: grid
-                place-items: center
-                // background: $blue
-                // opacity: 0.1
+                height: auto
+                background: #e8f9fb
+                padding: 20px
                 border-radius: 16px
+
+                &:hover
+                    background: $blue
+                    z-index: 1
 
             &-bigtext
                 font-weight: 600
@@ -69,12 +70,16 @@
                 align-items: center
                 gap: 10px
 
+                &:hover
+                    text-decoration: underline
+
     &__starthosting
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        background: radial-gradient(64.31% 149.75% at 29.67% 103.75%, #1F2742 0%, #2F395A 100%)
+        background-repeat: no-repeat
+        background-size: cover
         border-radius: 24px
         gap: 40px
         padding: 104px 325px
