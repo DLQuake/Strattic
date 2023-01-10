@@ -56,9 +56,7 @@ class WPSiteConfig extends \Timber\Site
   {
     register_nav_menus(array(
       'primary' => esc_html__('Primary menu', $GLOBALS['slug']),
-      'footer' => esc_html__('Footer menu', $GLOBALS['slug']),
       'burger' => esc_html__('Mobile menu', $GLOBALS['slug']),
-      'features' => esc_html__('Features menu', $GLOBALS['slug']),
     ));
   }
 
@@ -66,9 +64,7 @@ class WPSiteConfig extends \Timber\Site
   {
     $context['nav'] = array(
       'primary' => new \TimberMenu('primary'),
-      'footer' => new \TimberMenu('footer'),
       'burger' => new \TimberMenu('burger'),
-      'features' => new \TimberMenu('features'),
     );
 
     $context['site'] = $this;
