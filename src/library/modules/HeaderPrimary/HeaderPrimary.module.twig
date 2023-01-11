@@ -13,14 +13,17 @@
 						{% if item.children %}
 							{% include "modules/Button/Button.module.twig" with {
 								type: "link",
+								color: "white",
 								link: item.link,
-								text: item.title
+								text: item.title,
+								drop: true
 							}%}
 							<ul class="m-HeaderPrimary__drop">
 								{% for child in item.children %}
 									<li class="m-HeaderPrimary__childItem">
 										{% include "modules/Button/Button.module.twig" with {
 											type: "link",
+											color: "black",
 											link: child.link,
 											text: child.title
 										}%}

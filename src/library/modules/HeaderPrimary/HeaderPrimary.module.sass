@@ -60,7 +60,7 @@
 		gap: 14px
 		position: absolute
 		top: 100%
-		left: 0
+		left: -48px
 		width: 312px
 		padding: 33px 40px
 		background: $white
@@ -88,12 +88,17 @@
 			display: none
 
 		&:hover
-			background: $blue
-			color: $white
+			color: $red
 			transition: all 0.3s ease-in-out
 
 		&--red
 			background: $red
+			color: $white
+
+			&:hover
+				background: #FA292F
+				color: $white
+				transition: all 0.3s ease-in-out
 
 	&__rectangle
 		width: 32px

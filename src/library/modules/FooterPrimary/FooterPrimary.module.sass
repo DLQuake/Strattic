@@ -76,15 +76,28 @@
 
 		&-menu
 			display: flex
-			flex-direction: column
-			justify-content: space-between
-			gap: 10px
+			gap: 200px
 
 			&-item
-				color: $other_grey !important
+				color: $white
+				font-weight: 600
+				font-size: 20px
+				line-height: 130%
+				display: flex
+				flex-direction: column
+				gap: 24px
 
 			+max($bp-sm)
 				justify-content: flex-start
+
+		&-childMenu
+			display: flex
+			flex-direction: column
+			gap: 10px
+			width: 100%
+			height: 160px
+			flex-wrap: wrap
+
 
 		&-link
 			font-size: 18px

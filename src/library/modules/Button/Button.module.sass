@@ -20,6 +20,54 @@
   +max($bp-sm)
     +fslh(15, 25)
 
+  span
+    display: inline-block
+    color: inherit
+    font-size: 10px
+    margin-left: 4px
+    transition: transform 0.2s linear
+
+  &.-white
+    color: $white
+    &:hover
+      color: $red
+      +max($bp-sm)
+        color: $white
+
   &.-black
-    background-color: $white
     color: #000000
+    &:hover
+      color: $red
+      +max($bp-sm)
+        color: #000000
+
+  &.-other_black
+    color: $other_black
+    &:hover
+      color: $white
+      +max($bp-sm)
+        color: $other_black
+
+  &.-small
+    +fslh(13, 22)
+    padding-top: 10px
+    padding-bottom: 10px
+    +max($bp-sm)
+      +fslh(9, 15)
+
+  &.-big
+    +fslh(24, 24)
+    font-weight: 900
+    font-family: $font-primary
+    padding-top: 18px
+    padding-bottom: 18px
+    letter-spacing: 0
+
+  &.-large
+    +fslh(28, 61)
+    font-weight: 900
+    font-family: $font-primary
+    letter-spacing: 0
+    border-radius: 81px
+    +max($bp-sm)
+      +fslh(24, 52)

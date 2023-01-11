@@ -9,53 +9,23 @@
 
 	<nav class="m-FooterPrimary__navigation">
 		<ul class="m-FooterPrimary__navigation-menu -desktop">
-			<div class="m-FooterPrimary__navigation-title">About Static</div>
 			{% for item in nav.footer.items %}
 				<li class="m-FooterPrimary__navigation-menu-item">
-					{% include "modules/Button/Button.module.twig" with {
-							type: "link",
-							link: item.link,
-							text: item.title
-						}%}
-				</li>
-			{% endfor %}
-		</ul>
-
-		<ul class="m-FooterPrimary__navigation-menu -desktop">
-			<div class="m-FooterPrimary__navigation-title">Learn More</div>
-			{% for item in nav.footer.items %}
-				<li class="m-FooterPrimary__navigation-menu-item">
-					{% include "modules/Button/Button.module.twig" with {
-							type: "link",
-							link: item.link,
-							text: item.title
-						}%}
-				</li>
-			{% endfor %}
-		</ul>
-
-		<ul class="m-FooterPrimary__navigation-menu -desktop">
-			<div class="m-FooterPrimary__navigation-title">The Company</div>
-			{% for item in nav.footer.items %}
-				<li class="m-FooterPrimary__navigation-menu-item">
-					{% include "modules/Button/Button.module.twig" with {
-							type: "link",
-							link: item.link,
-							text: item.title
-						}%}
-				</li>
-			{% endfor %}
-		</ul>
-
-		<ul class="m-FooterPrimary__navigation-menu -desktop">
-			<div class="m-FooterPrimary__navigation-title">Compare Strattic to Other Hosts</div>
-			{% for item in nav.footer.items %}
-				<li class="m-FooterPrimary__navigation-menu-item">
-					{% include "modules/Button/Button.module.twig" with {
-							type: "link",
-							link: item.link,
-							text: item.title
-						}%}
+					{% if item.children %}
+						{{item.title}}
+						<ul class="m-FooterPrimary__navigation-childMenu">
+							{% for child in item.children %}
+								<li class="m-FooterPrimary__navigation-menu-childItem">
+									{% include "modules/Button/Button.module.twig" with {
+											type: "link",
+											color: "black",
+											link: child.link,
+											text: child.title
+										}%}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
 				</li>
 			{% endfor %}
 		</ul>
