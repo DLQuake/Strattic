@@ -2,7 +2,7 @@ import $ from 'jquery';
 const HeaderPrimary = {
   settings: {
     target: '.m-HeaderPrimary',
-    dropButton: '.m-Button.-drop'
+    dropLink: '.m-Button.-drop'
   },
   init(args) {
     this.settings = $.extend(true, this.settings, args);
@@ -20,13 +20,13 @@ const HeaderPrimary = {
     const target = $(settings.target);
     this.$target = {
       root: target,
-      dropButton: target.find(settings.dropButton),
+      dropLink: target.find(settings.dropLink),
     };
     callback();
   },
   bindEvents() {
-    $(this.$target.dropButton).parents(".m-HeaderPrimary__item").on('mouseover', this.dropMenu.bind(this));
-    $(this.$target.dropButton).parents(".m-HeaderPrimary__item").on('mouseleave', this.hideMenu.bind(this));
+    $(this.$target.dropLink).parents(".m-HeaderPrimary__item").on('mouseover', this.dropMenu.bind(this));
+    $(this.$target.dropLink).parents(".m-HeaderPrimary__item").on('mouseleave', this.hideMenu.bind(this));
     $(window).on('scroll', () => {
       if ($(window).scrollTop() > 0) {
         $(this.$target.root).addClass('-scroll');
@@ -45,7 +45,7 @@ const HeaderPrimary = {
         $(this).css('display', 'flex');
       }
     })
-    $(target).find(this.settings.dropButton).find('span').css('transform', 'rotate(-180deg)');
+    $(target).find(this.settings.dropLink).find('span').css('transform', 'rotate(-180deg)');
   },
   hideMenu(e) {
     const target = $(e.currentTarget);
@@ -53,7 +53,7 @@ const HeaderPrimary = {
     $(drop).slideUp({
       duration: 300,
     });
-    $(target).find(this.settings.dropButton).find('span').removeAttr('style');
+    $(target).find(this.settings.dropLink).find('span').removeAttr('style');
   }
 };
 export default HeaderPrimary;
