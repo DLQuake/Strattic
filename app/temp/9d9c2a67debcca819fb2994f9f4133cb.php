@@ -60,14 +60,14 @@ return array (
     'WCD\\WPSiteConfig' => 
     array (
       'file' => 'C:\\xampp\\htdocs\\Strattic/wp-content/themes/Strattic/app/SiteConfig\\SiteConfig.php',
-      'time' => 1673351260,
+      'time' => 1673431978,
     ),
   ),
   1 => 
   array (
-    'TimberArchives' => 212,
-    'WP_CLI_Command' => 412,
-    'Timber\\Integrations\\Timber_WP_CLI_Command' => 206,
+    'TimberArchives' => 213,
+    'WP_CLI_Command' => 414,
+    'Timber\\Integrations\\Timber_WP_CLI_Command' => 207,
     'WP_Site_Health' => 202,
     'acf_third_party' => 196,
     'WooCommerce' => 31,
