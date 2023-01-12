@@ -1,7 +1,7 @@
 .m-Button
   -webkit-appearance: none
   display: inline-block
-  color: $other_grey
+  color: #000000
   width: auto !important
   +fslh(18, 30)
   font-weight: 400
@@ -36,17 +36,21 @@
 
   &.-black
     color: #000000
+    +max($bp-sm)
+      padding: 12px 18px
     &:hover
       color: $red
       +max($bp-sm)
-        color: #000000
+        background: rgba(26, 195, 218, 0.1)
+        border-radius: 10px
+        color: $blue
 
-  &.-other_black
-    color: $other_black
+  &.-other_grey
+    color: $other_grey
     &:hover
       color: $white
       +max($bp-sm)
-        color: $other_black
+        color: $other_grey
 
   &.-small
     +fslh(13, 22)
