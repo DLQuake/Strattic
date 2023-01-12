@@ -39,7 +39,7 @@ const HeaderPrimary = {
   dropMenu(e) {
     const target = $(e.currentTarget);
     const drop = $(target).find('.m-HeaderPrimary__drop');
-    $(drop).slideDown({
+    $(drop).fadeIn({
       duration: 300,
       start: function () {
         $(this).css('display', 'flex');
@@ -50,7 +50,7 @@ const HeaderPrimary = {
   hideMenu(e) {
     const target = $(e.currentTarget);
     const drop = $(target).find('.m-HeaderPrimary__drop');
-    $(drop).slideUp({
+    $(drop).fadeOut({
       duration: 300,
     });
     $(target).find(this.settings.dropLink).find('span').removeAttr('style');
