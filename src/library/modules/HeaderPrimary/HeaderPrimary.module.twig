@@ -1,57 +1,118 @@
-<div class="m-HeaderPrimary">
-	<div class="m-HeaderPrimary__container" data-aos="fade-left">
-		<div class="m-HeaderPrimary__container-left">
-			<a href="/">
-				<img src="{{theme.link}}/static/img/logo.svg" width="211" height="47" alt="Strattic" class="m-HeaderPrimary__logo"/>
-			</a>
+{% if header == "white" %}
+	<div class="m-HeaderPrimary">
+		<div class="m-HeaderPrimary__container" data-aos="fade-left">
+			<div class="m-HeaderPrimary__container-left">
+				<a href="/">
+					<img src="{{theme.link}}/static/img/logo.svg" width="211" height="47" alt="Strattic" class="m-HeaderPrimary__logo"/>
+				</a>
 
-			<div class="m-HeaderPrimary__rectangle"></div>
+				<div class="m-HeaderPrimary__rectangle"></div>
 
-			<ul class="m-HeaderPrimary__menu -desktop">
-				{% for item in nav.primary.items %}
-					<li class="m-HeaderPrimary__item">
-						{% if item.children %}
-							{% include "modules/Button/Button.module.twig" with {
-								type: "link",
-								color: "white",
-								link: item.link,
-								text: item.title,
-								drop: true
-							}%}
-							<ul class="m-HeaderPrimary__drop">
-								{% for child in item.children %}
-									<li class="m-HeaderPrimary__childItem">
-										{% include "modules/Button/Button.module.twig" with {
-											type: "link",
-											color: "black",
-											link: child.link,
-											text: child.title
-										}%}
-									</li>
-								{% endfor %}
-							</ul>
-						{% else %}
-							{% include "modules/Button/Button.module.twig" with {
-								type: "link",
-								color: "white",
-								link: item.link,
-								text: item.title
-							}%}
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="m-HeaderPrimary__container-right">
-			<a class="m-HeaderPrimary__link" href="#">Login</a>
-			<a class="m-HeaderPrimary__link m-HeaderPrimary__link--red" href="#">Get started</a>
-			<div class="m-HeaderPrimary__menu -mobile">
-				{% include "modules/BurgerMenu/BurgerMenu.module.twig" with {
-					stickColor: "white"
-				}%}
+				<ul class="m-HeaderPrimary__menu -desktop">
+					{% for item in nav.primary.items %}
+						<li class="m-HeaderPrimary__item">
+							{% if item.children %}
+								{% include "modules/Button/Button.module.twig" with {
+									type: "link",
+									color: "white",
+									link: item.link,
+									text: item.title,
+									drop: true
+								}%}
+								<ul class="m-HeaderPrimary__drop">
+									{% for child in item.children %}
+										<li class="m-HeaderPrimary__childItem">
+											{% include "modules/Button/Button.module.twig" with {
+												type: "link",
+												color: "black",
+												link: child.link,
+												text: child.title
+											}%}
+										</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								{% include "modules/Button/Button.module.twig" with {
+									type: "link",
+									color: "white",
+									link: item.link,
+									text: item.title
+								}%}
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
 			</div>
-		</div>
 
+			<div class="m-HeaderPrimary__container-right">
+				<a class="m-HeaderPrimary__link" href="#">Login</a>
+				<a class="m-HeaderPrimary__link m-HeaderPrimary__link--red" href="#">Get started</a>
+				<div class="m-HeaderPrimary__menu -mobile">
+					{% include "modules/BurgerMenu/BurgerMenu.module.twig" with {
+						stickColor: "white"
+					}%}
+				</div>
+			</div>
+
+		</div>
 	</div>
-</div>
+{% elseif header == "black" %}
+	<div class="m-HeaderPrimary">
+		<div class="m-HeaderPrimary__container" data-aos="fade-left">
+			<div class="m-HeaderPrimary__container-left">
+				<a href="/">
+					<img src="{{theme.link}}/static/img/logo_black.svg" width="211" height="47" alt="Strattic" class="m-HeaderPrimary__logo"/>
+				</a>
+
+				<div class="m-HeaderPrimary__rectangle"></div>
+
+				<ul class="m-HeaderPrimary__menu -desktop">
+					{% for item in nav.primary.items %}
+						<li class="m-HeaderPrimary__item">
+							{% if item.children %}
+								{% include "modules/Button/Button.module.twig" with {
+									type: "link",
+									color: "black",
+									link: item.link,
+									text: item.title,
+									drop: true
+								}%}
+								<ul class="m-HeaderPrimary__drop">
+									{% for child in item.children %}
+										<li class="m-HeaderPrimary__childItem">
+											{% include "modules/Button/Button.module.twig" with {
+												type: "link",
+												color: "black",
+												link: child.link,
+												text: child.title
+											}%}
+										</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								{% include "modules/Button/Button.module.twig" with {
+									type: "link",
+									color: "black",
+									link: item.link,
+									text: item.title
+								}%}
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="m-HeaderPrimary__container-right">
+				<a class="m-HeaderPrimary__link" href="#">Login</a>
+				<a class="m-HeaderPrimary__link m-HeaderPrimary__link--red" href="#">Get started</a>
+				<div class="m-HeaderPrimary__menu -mobile">
+					{% include "modules/BurgerMenu/BurgerMenu.module.twig" with {
+						stickColor: "white"
+					}%}
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endif %}
+
