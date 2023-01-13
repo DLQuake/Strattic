@@ -19,5 +19,17 @@ $config['gutenberg_blocks'] = [
       'name' => 'LearnMore',
       'title' => 'LearnMore,'
     ],
+    'Title' => [
+      'name' => 'Title',
+      'title' => 'Title,'
+    ],
+    'Video' => [
+      'name' => 'Video',
+      'title' => 'Video,'
+    ],
+    'HowItWorks' => [
+      'name' => 'HowItWorks',
+      'title' => 'HowItWorks,'
+    ],
   ]
 ];
