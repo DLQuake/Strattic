@@ -2,15 +2,18 @@
 	background: $black_footer
 	width: 100%
 	padding: 119px 117px
-	+max($bp-md)
-		padding-left: 0px
-		padding-right: 0px
+	+max($bp-sm)
+		padding: 58px 43px
 
 	&__form
 		padding: 57px 0
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+max($bp-sm)
+			text-align: center
+			flex-direction: column
+			gap: 36px
 
 		&-title
 			font-weight: 600
@@ -21,6 +24,12 @@
 		&-input
 			display: flex
 			gap: 10px
+			+max($bp-sm)
+				width: 100%
+			+max(590px)
+				justify-content: center
+				align-items: center
+				flex-wrap: wrap
 
 			&-email
 				width: 336px
@@ -33,6 +42,8 @@
 				font-size: 16px
 				line-height: 22px
 				outline: none
+				+max($bp-sm)
+					width: 100%
 
 				&::placeholder
 					color: #000000
@@ -62,9 +73,6 @@
 		display: flex
 		align-items: center
 		gap: 278px
-		+max($bp-md)
-			padding-left: 80px
-			padding-right: 80px
 
 		&-title
 			display: flex
@@ -77,6 +85,9 @@
 		&-menu
 			display: flex
 			gap: 200px
+			+max($bp-sm)
+				flex-direction: column
+				gap: 32px
 
 			&-item
 				color: $white
@@ -97,6 +108,9 @@
 			width: 100%
 			height: 160px
 			flex-wrap: wrap
+			+max($bp-sm)
+				height: auto
+				flex-wrap: nowrap
 
 
 		&-link
@@ -119,22 +133,23 @@
 			background: $white
 			opacity: 0.2
 			border-radius: 0px 0px 5px 5px
+			+max($bp-sm)
+				width: 100%
 
 	&__data
 		padding: 57px 0 0 0
 		display: flex
 		justify-content: space-between
 		align-items: center
-		+max($bp-md)
-			padding: 57px 80px
 		+max($bp-sm)
+			padding: 0
 			width: 100%
-			justify-content: flex-start
-			align-items: flex-start
-			flex-direction: column-reverse
+			flex-direction: column
 			gap: 29px
-			padding-left: 60px
-			padding-right: 60px
+
+		&-logo
+			&--mobileNone
+				display: none
 
 		&-copyrithing
 			display: flex
@@ -146,6 +161,8 @@
 			font-size: 16px
 			line-height: 180%
 			color: $white
+			+max($bp-sm)
+				font-size: 14px
 
 		&-socials
 			display: flex

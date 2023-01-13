@@ -3,6 +3,8 @@
     background-repeat: no-repeat
     background-size: cover
     padding: 100px 0
+    +max($bp-sm)
+        padding: 44px 10px
 
     &__slider
         width: 100%
@@ -12,12 +14,19 @@
             align-items: center
             width: 100% !important
             gap: 340px
+            +max($bp-sm)
+                flex-direction: column-reverse
+                gap: 264.78px
 
             &-content
                 width: 754px
                 display: flex
                 flex-direction: column
                 gap: 32px
+                +max($bp-sm)
+                    width: 100%
+                    text-align: center
+                    align-items: center
 
                 &-text
                     font-weight: 400
@@ -66,6 +75,9 @@
 
             &-image
                 border-radius: 100%
+                +max($bp-sm)
+                    width: 100%
+                    height: auto
 
         &-pagination
             position: relative !important

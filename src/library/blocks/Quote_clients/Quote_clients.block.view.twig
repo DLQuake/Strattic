@@ -1,6 +1,13 @@
 <style>
 	.b-Quote_clients {
 		background-image: url({{fields.background.url}});
+
+	}
+
+	@media(max-width: 768px) {
+		.b-Quote_clients {
+			background-image: url({{fields.background_mobile.url}});
+		}
 	}
 </style>
 <section class="b-Quote_clients">

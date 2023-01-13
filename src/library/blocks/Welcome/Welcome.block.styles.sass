@@ -27,7 +27,10 @@
             gap: 25px
             color: $white
             +max($bp-sm)
+                justify-content: center
+                align-items: center
                 margin-bottom: 50px
+                text-align: center
             +max($bp-xs)
                 margin-bottom: 45px
 
@@ -42,10 +45,8 @@
                 font-weight: 600
                 font-size: 64px
                 line-height: 130%
-                +max($bp-sm)
-                    width: 100%
-                    +fslh(30, 41)
-                    // +fslh(30, 41)
+                +max(320px)
+                    font-size: 40px
 
             &-button
                 width: 197px
@@ -67,16 +68,13 @@
                     transition: all 0.3s ease-in-out
 
         &-image
-            width: 39.947916666666664vw
+            width: 100%
             height: auto
-            +max($bp-sm)
-                width: 82vw
 
     &__partners
         width: 80%
         display: flex
         flex-direction: column
-        justify-content: space-between
         gap: 65px
 
         &-title
@@ -95,12 +93,14 @@
                 width: 90%
                 height: 0px
                 border: 1px solid rgba(255, 255, 255, 0.05)
+                +max($bp-sm)
+                    width: 70%
 
         &-images
             opacity: 0.5
             display: grid
             place-items: center
-            grid-template-columns: repeat(7, 1fr)
+            grid-template-columns: repeat(auto-fill, minmax(103px, 1fr))
             grid-template-rows: 1fr
             grid-column-gap: 100px
-            grid-row-gap: 0px
+            grid-row-gap: 10em
