@@ -1,0 +1,24 @@
+<section class="b-HowItWorks">
+	<h1 class="b-HowItWorks__title">{{fields.title}}</h1>
+	{% for item in fields.howitworks %}
+		{% if loop.index % 2 == 1 %}
+			<div class="b-HowItWorks__flex b-HowItWorks__flex--reverse">
+				<div class="b-HowItWorks__flex-text">
+					<h1 class="b-HowItWorks__flex-text-number">{{loop.index}}</h1>
+					<h1 class="b-HowItWorks__flex-text-big">{{item.content.bigtext}}</h1>
+					<p class="b-HowItWorks__flex-text-small">{{item.content.smalltext}}</p>
+				</div>
+				<img class="b-HowItWorks__flex-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
+			</div>
+		{% else %}
+			<div class="b-HowItWorks__flex">
+				<div class="b-HowItWorks__flex-text">
+					<h1 class="b-HowItWorks__flex-text-number">{{loop.index}}</h1>
+					<h1 class="b-HowItWorks__flex-text-big">{{item.content.bigtext}}</h1>
+					<p class="b-HowItWorks__flex-text-small">{{item.content.smalltext}}</p>
+				</div>
+				<img class="b-HowItWorks__flex-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
+			</div>
+		{% endif %}
+	{% endfor %}
+</section>

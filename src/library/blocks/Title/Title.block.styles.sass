@@ -1,0 +1,50 @@
+.b-Title
+    padding: 280px 0 129px 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-repeat: no-repeat
+    background-size: cover
+    margin-top: -162px
+
+    &__title
+        margin-bottom: 90px
+        width: 83%
+        display: flex
+        justify-content: center
+        gap: 40px
+        +max($bp-xxlg)
+            margin-bottom: 85px
+        +max($bp-sm)
+            margin: 0
+            flex-direction: column-reverse
+
+        &-text
+            display: flex
+            flex-direction: column
+            text-align: center
+            gap: 25px
+            color: #000000
+            font-family: $font-secondary
+            +max($bp-sm)
+                justify-content: center
+                align-items: center
+                margin-bottom: 50px
+                text-align: center
+            +max($bp-xs)
+                margin-bottom: 45px
+
+            &-small
+                font-weight: 400
+                font-size: 20px
+                line-height: 170%
+                margin-bottom: 64px
+
+            &-big
+                font-weight: 600
+                font-size: 64px
+                line-height: 120%
+                +max(320px)
+                    font-size: 40px
