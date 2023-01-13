@@ -20,6 +20,7 @@
         display: flex
         justify-content: center
         align-items: center
+        flex-wrap: wrap
         gap: 16px
         +max($bp-sm)
             flex-direction: column
@@ -34,7 +35,7 @@
             border-radius: 10px
             padding: 40px
             +max($bp-sm)
-                width: 80%
+                width: 90%
 
             &:hover
                 box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
@@ -91,7 +92,8 @@
         background-size: cover
         border-radius: 24px
         gap: 40px
-        padding: 104px 325px
+        padding: 104px 0
+        width: 63%
         +max($bp-sm)
             width: 80%
             padding: 106px 40px
