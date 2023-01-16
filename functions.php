@@ -27,8 +27,9 @@ $config = [];
 require_once(__DIR__ . "/config/config.php");
 require_once(__DIR__ . "/app/app.php");
 require_once("post-types/SF_post.php");
-// require_once("post-types/SF_products.php");
-// require_once("post-types/SF_markers.php");
+require_once("post-types/SF_products.php");
+require_once("post-types/SF_help_center.php");
+require_once("post-types/SF_faq.php");
 
 
 ini_set('upload_max_size', '64M');
@@ -44,6 +45,8 @@ ini_set('max_execution_time', '300');
 
 function reg_tag() {
   register_taxonomy_for_object_type('post_tag', 'products');
+  register_taxonomy_for_object_type('post_tag', 'helpcenter');
+  register_taxonomy_for_object_type('post_tag', 'faq');
 }
 add_action('init', 'reg_tag');
 
