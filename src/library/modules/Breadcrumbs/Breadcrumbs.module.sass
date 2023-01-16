@@ -1,0 +1,46 @@
+.m-Breadcrumbs
+  display: flex
+  align-items: center
+  gap: 14px
+  margin-bottom: 44px
+
+  &.-big
+    margin-bottom: 46px
+
+    .m-Breadcrumbs__item
+      +fslh(24, 54)
+      color: $other_black
+
+    .m-Breadcrumbs__arrow
+      +fslh(18, 54)
+      color: $other_black
+
+  &__item
+    font-family: $font-secondary
+    display: flex
+    align-items: center
+    font-weight: 400
+    font-size: 16px
+    line-height: 180%
+    color: $other_black
+    opacity: 0.75
+    cursor: pointer
+    text-decoration: none
+
+    &:hover
+      color: $other_black
+      text-decoration: none
+
+    &:last-child
+      color: $other_black
+      cursor: default
+
+      +max($bp-sm)
+        display: block
+
+      &:hover
+        color: $other_black
+
+  &__arrow
+    color: $other_black
+    font-weight: 400

@@ -7,7 +7,7 @@
 	gap: 53px
 
 	&__rectangle
-		+max($bp-sm)
+		+max(1066px)
 			display: none
 
 	&__container
@@ -33,21 +33,26 @@
 		+max($bp-xxs)
 			width: 120px
 
+	&__link
+		+max(1066px)
+			display: none
+
 	&__menu
 		display: flex
 		gap: 40px
-		+max($bp-sm)
+		+max(1066px)
 			display: none
 		.m-Button
 			padding: 0 8px
-			+max($bp-sm)
+			+max(1066px)
 				display: flex
 				justify-content: space-between
 				align-items: center
+				height: 48px
 
 		&.-mobile
 			display: none
-			+max($bp-sm)
+			+max(1066px)
 				display: block
 
 	&__item
@@ -88,6 +93,9 @@
 		border-radius: 5px 6px 6px 6px
 		+max($bp-sm)
 			display: none
+
+		&--black
+			color: #000000
 
 		&:hover
 			color: $red

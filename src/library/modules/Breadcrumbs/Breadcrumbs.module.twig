@@ -1,0 +1,9 @@
+<div class="m-Breadcrumbs {% if size == "big" %}-big {% endif %}">
+  {% for crumb in crumbs %}
+    <a class="m-Breadcrumbs__item" {% if crumb.link %}href="{{crumb.link}}"{% endif %} title="{{crumb.text}}">
+      {{crumb.text}}
+    </a>
+    {% if loop.index != crumbs|length %}<span class="m-Breadcrumbs__arrow"> > </span>{% endif %}
+  {% endfor %}
+</div>
+
