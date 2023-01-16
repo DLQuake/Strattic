@@ -1,22 +1,22 @@
 <?php
 
 
-class SF_markers extends SF_abstract_post
+class SF_faq extends SF_abstract_post
 {
-  public static $name = 'Markers';
-  public static $slug = 'markers';
+  public static $name = 'FAQ';
+  public static $slug = 'faq';
 
   public function createPost()
   {
     $labels = array(
       'name' => _x(self::$name, 'tag'),
       'singular_name' => _x(self::$name, 'tag'),
-      'add_new' => _x('Add marker', 'tag'),
-      'add_new_item' => _x('Add marker', 'tag'),
-      'edit_item' => _x('Edit marker', 'tag'),
-      'new_item' => _x('New marker', 'tag'),
-      'view_item' => _x('Show marker', 'tag'),
-      'search_items' => _x('Search marker', 'tag'),
+      'add_new' => _x('Add question', 'tag'),
+      'add_new_item' => _x('Add question', 'tag'),
+      'edit_item' => _x('Edit question', 'tag'),
+      'new_item' => _x('New question', 'tag'),
+      'view_item' => _x('Show question', 'tag'),
+      'search_items' => _x('Search question', 'tag'),
       'not_found' => _x('Not found', 'tag'),
       'not_found_in_trash' => _x('No found in trash', 'tag'),
       'parent_item_colon' => _x('Parent:', 'tag'),
@@ -32,7 +32,7 @@ class SF_markers extends SF_abstract_post
       'show_ui' => true,
       'show_in_menu' => true,
       'menu_position' => 45,
-      'menu_icon' => 'dashicons-location',
+      'menu_icon' => 'dashicons-welcome-learn-more',
       'show_in_nav_menus' => true,
       'publicly_queryable' => true,
       'exclude_from_search' => true,
@@ -46,4 +46,4 @@ class SF_markers extends SF_abstract_post
     register_post_type(self::$slug, $args);
   }
 }
-new SF_markers();
+new SF_faq();
