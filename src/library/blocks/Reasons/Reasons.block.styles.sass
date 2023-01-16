@@ -1,0 +1,61 @@
+.b-Reasons
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 120px
+    padding: 0 220px
+    +max($bp-sm)
+        padding: 0
+
+    &__list
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+        grid-column-gap: 54px
+        grid-row-gap: 32px
+        box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
+        border-radius: 16px
+        background: $white
+        padding: 49px 50px
+        +max($bp-sm)
+            padding: 49px 20px
+
+        &-item
+            width: 219px
+            display: flex
+            align-items: center
+            gap: 22px
+            +max($bp-sm)
+                width: 100%
+
+            &-icon
+                width: 64px
+                height: 64px
+                background: #e7f7fa
+                border-radius: 16px
+                padding: 20px
+                position: relative
+
+                &-index
+                    position: absolute
+                    top: -10px
+                    left: -13px
+                    width: 28px
+                    height: 28px
+                    font-weight: 600
+                    font-size: 12px
+                    line-height: 130%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-align: center
+                    color: $white
+                    background: $blue
+                    box-shadow: 0px 12px 24px rgba(39, 48, 78, 0.08)
+                    border-radius: 100%
+
+            &-text
+                font-weight: 600
+                font-size: 16px
+                line-height: 130%

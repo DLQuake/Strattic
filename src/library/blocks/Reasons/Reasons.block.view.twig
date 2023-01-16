@@ -1,0 +1,13 @@
+<div class="b-Reasons">
+	<div class="b-Reasons__list">
+		{% for item in fields.reason %}
+			<div class="b-Reasons__list-item">
+				<div class="b-Reasons__list-item-icon">
+					<div class="b-Reasons__list-item-icon-index">{{loop.index}}</div>
+					<img class="b-Reasons__list-item-icon-image" src="{{item.icon}}" width="24" height="24" alt="icon">
+				</div>
+				<div class="b-Reasons__list-item-text">{{item.text}}</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

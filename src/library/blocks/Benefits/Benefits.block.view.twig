@@ -3,18 +3,32 @@
 		{% if loop.index % 2 == 0 %}
 			<div class="b-Benefits__flex b-Benefits__flex--reverse">
 				<div class="b-Benefits__flex-text">
+					{% if item.content.icon %}
+						<div class="b-Benefits__flex-icon">
+							<img class="b-Benefits__flex-icon-image" src="{{item.content.icon}}" width="24" height="24" alt="icon">
+						</div>
+					{% endif %}
 					<h1 class="b-Benefits__flex-text-big">{{item.content.bigtext}}</h1>
 					<p class="b-Benefits__flex-text-small">{{item.content.smalltext}}</p>
-					<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
+					{% if item.content.link.url %}
+						<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
+					{% endif %}
 				</div>
 				<img class="b-Benefits__flex-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
 			</div>
 		{% else %}
 			<div class="b-Benefits__flex">
 				<div class="b-Benefits__flex-text">
+					{% if item.content.icon %}
+						<div class="b-Benefits__flex-icon">
+							<img class="b-Benefits__flex-icon-image" src="{{item.content.icon}}" width="24" height="24" alt="icon">
+						</div>
+					{% endif %}
 					<h1 class="b-Benefits__flex-text-big">{{item.content.bigtext}}</h1>
 					<p class="b-Benefits__flex-text-small">{{item.content.smalltext}}</p>
-					<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
+					{% if item.content.link.url  %}
+						<a class="b-Benefits__flex-text-link" href="{{item.content.link.url}}">{{item.content.link.linktext}}</a>
+					{% endif %}
 				</div>
 				<img class="b-Benefits__flex-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
 			</div>

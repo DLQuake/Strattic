@@ -1,0 +1,24 @@
+<div class="b-FAQ">
+	<div class="b-FAQ__container">
+		{% include "modules/Breadcrumbs/Breadcrumbs.module.twig" with {
+			size: "big",
+			crumbs: crumbs,
+		}%}
+		<div class="b-FAQ__list">
+			{% for arg in args %}
+				{% include "modules/FAQCard/FAQCard.module.twig" with {
+					link: arg.url_post,
+					title: arg.title_post,
+					text: arg.post_excerpt,
+					image: arg.post_image,
+					imageAlt:  arg.title_post,
+					textLayout: "textTitle",
+					imageWidthNormal: 367,
+					imageHeightNormal: 316,
+					imageWidthSmall: 133,
+					imageHeightSmall: 161,
+					}%}
+			{% endfor %}
+		</div>
+	</div>
+</div>
