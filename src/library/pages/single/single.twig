@@ -1,7 +1,9 @@
 {% extends "layouts/base/base.twig" %}
 
 {% block content %}
-{% include "modules/HeaderPrimary/HeaderPrimary.module.twig" %}
+{% include "modules/HeaderPrimary/HeaderPrimary.module.twig" with {
+	header: "black",
+}%}
 {{ post.content }}
 {% include "modules/FooterPrimary/FooterPrimary.module.twig" %}
 {% endblock %}
