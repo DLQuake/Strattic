@@ -1,22 +1,22 @@
 <?php
 
 
-class SF_products extends SF_abstract_post
+class SF_strattic_tools extends SF_abstract_post
 {
-  public static $name = 'Products';
-  public static $slug = 'products';
+  public static $name = 'Strattic_tools';
+  public static $slug = 'strattic_tools';
 
   public function createPost()
   {
     $labels = array(
       'name' => _x(self::$name, 'tag'),
       'singular_name' => _x(self::$name, 'tag'),
-      'add_new' => _x('Add product', 'tag'),
-      'add_new_item' => _x('Add product', 'tag'),
-      'edit_item' => _x('Edit product', 'tag'),
-      'new_item' => _x('New product', 'tag'),
-      'view_item' => _x('Show product', 'tag'),
-      'search_items' => _x('Search product', 'tag'),
+      'add_new' => _x('Add Strattic tool', 'tag'),
+      'add_new_item' => _x('Add Strattic tool', 'tag'),
+      'edit_item' => _x('Edit Strattic tool', 'tag'),
+      'new_item' => _x('New Strattic tool', 'tag'),
+      'view_item' => _x('Show Strattic tool', 'tag'),
+      'search_items' => _x('Search Strattic tool', 'tag'),
       'not_found' => _x('Not found', 'tag'),
       'not_found_in_trash' => _x('No found in trash', 'tag'),
       'parent_item_colon' => _x('Parent:', 'tag'),
@@ -46,4 +46,4 @@ class SF_products extends SF_abstract_post
     register_post_type(self::$slug, $args);
   }
 }
-new SF_products();
+new SF_strattic_tools();
