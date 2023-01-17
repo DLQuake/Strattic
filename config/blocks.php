@@ -43,5 +43,9 @@ $config['gutenberg_blocks'] = [
       'name' => 'Reasons',
       'title' => 'Reasons,'
     ],
+    'Tools' => [
+      'name' => 'Tools',
+      'title' => 'Tools,'
+    ],
   ]
 ];
