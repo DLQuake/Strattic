@@ -1,0 +1,35 @@
+.m-ToolsCard
+  display: flex
+  flex-direction: column
+  border-radius: 18px
+  overflow: hidden
+  cursor: pointer
+  text-decoration: none
+  width: 100%
+  padding: 40px
+  gap: 40px
+  border: 1px solid rgba(227, 225, 226, 0.5)
+  border-radius: 10px
+
+  &:hover
+    text-decoration: none
+    box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
+    transition: all 0.3s ease-in-out
+
+  &__box
+    display: flex
+    flex-direction: column
+    gap: 9px
+    color: #000000
+
+  &__title
+    font-weight: 600
+    font-size: 24px
+    line-height: 130%
+
+  &__text
+    font-family: $font-secondary
+    font-weight: 400
+    font-size: 16px
+    line-height: 180%
+    color: $other_black

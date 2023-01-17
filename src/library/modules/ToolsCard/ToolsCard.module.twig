@@ -1,0 +1,11 @@
+<a class="m-ToolsCard" href="{{link}}" title="{{title}}">
+	<picture>
+		<source srcset="{{image|resize(imageWidthNormal, imageHeightNormal, "center")}}" media="(min-width: 480px)">
+		<source srcset="{{image|resize(imageWidthSmall, imageHeightSmall, "center")}}">
+	</picture>
+	<img class="m-ToolsCard__img" src="{{image|resize(imageWidthNormal, imageHeightNormal, "center")}}" alt="{{imageAlt}}"/>
+	<div class="m-ToolsCard__box {% if textLayout == " onlyTitle" %}-onlyTitle {% elseif textLayout == " titleText" %}-titleText {% elseif textLayout == " texttitle" %}-texttitle{% endif %}">
+		<div class="m-ToolsCard__title">{{title}}</div>
+		<div class="m-ToolsCard__text">{{text}}</div>
+	</div>
+</a>
