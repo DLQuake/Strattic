@@ -1,0 +1,63 @@
+.b-Tools
+    padding: 280px 0 129px 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 51px
+    margin-top: 162px
+    margin-bottom: 120px
+
+    &__title
+        font-family: $font-secondary
+        font-weight: 600
+        font-size: 40px
+        line-height: 130%
+        text-align: center
+        color: #000000
+
+    &__container
+        width: 1194px
+        display: flex
+        justify-content: space-between
+        gap: 54px
+        &-left
+            display: flex
+            flex-direction: column
+            gap: 40px
+        &-right
+            width: 893px
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(196px, 1fr))
+            grid-column-gap: 16px
+            grid-row-gap: 15px
+
+    &__search
+        display: flex
+        gap: 8px
+        &-input
+            width: 336px
+            padding: 19px 32px
+            border: 1px solid #DBD6D8
+            border-radius: 10px
+            color: #000000
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            outline: none
+
+            &::placeholder
+                color: #000000
+                font-weight: 500
+                font-size: 16px
+                line-height: 22px
+
+            +max($bp-sm)
+                width: 100%
+
+        &-button
+            background: $blue
+            border-radius: 10px
+            padding: 19px 20px
+            border: none
