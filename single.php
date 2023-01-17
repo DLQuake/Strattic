@@ -9,7 +9,7 @@ $post = new Post();
 $context['post'] = $post;
 
 $args = array(
-  'post_type' => 'SF_Product',
+  'post_type' => 'SF_strattic_tools',
   'posts_per_page' => 3,
   'post__not_in' => array($post->ID),
 );
