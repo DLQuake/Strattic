@@ -1,0 +1,49 @@
+<section class="b-Pricing">
+	<div class="b-Pricing__price">
+		<div class="b-Pricing__price-buttons">
+			{% for item in fields.buttons %}
+				{% if loop.index % 2 == 1 %}
+					<button class="b-Pricing__price-buttons-button">{{item.button}}</button>
+				{% else %}
+					<button class="b-Pricing__price-buttons-button b-Pricing__price-buttons-button--white">{{item.button}}</button>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div class="b-Pricing__link">
+		<a class="b-Pricing__link-url" href="#"></a>
+	</div>
+	<div class="b-Pricing__partners">
+		<div class="b-Pricing__partners-title">
+			<div class="b-Pricing__partners-title-text">{{fields.partners.text}}</div>
+			<div class="b-Pricing__partners-title-rectangle"></div>
+		</div>
+		<div class="b-Pricing__partners-images">
+			{% for image in fields.partners.partner %}
+				<img class="b-Pricing__partners-images-image" src="{{image.image}}" alt="image">
+			{% endfor %}
+		</div>
+	</div>
+	<div class="b-Pricing__faq">
+		<h1>{{fields.question}}</h1>
+		<div class="frequently-asked-questions__questions-item">
+			<div class="frequently-asked-questions__questions-question" id="question1">
+				Do you charge for cases I submitted myself?
+				<span class="frequently-asked-questions__questions-symbol">
+					<img class="b-Pricing__partners-images-image" src="{{image.image}}" alt="image">
+				</span>
+			</div>
+			<div class="frequently-asked-questions__questions-answer" id="answer1"></div>
+		</div>
+	</div>
+</section>

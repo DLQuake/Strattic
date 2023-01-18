@@ -1,12 +1,11 @@
 .b-Tools
-    padding: 280px 0 129px 0
+    padding: 0 0 129px 0
     width: 100%
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     gap: 51px
-    margin-top: 162px
     margin-bottom: 120px
 
     &__title
@@ -14,50 +13,125 @@
         font-weight: 600
         font-size: 40px
         line-height: 130%
-        text-align: center
         color: #000000
 
     &__container
-        width: 1194px
+        width: 70%
         display: flex
         justify-content: space-between
-        gap: 54px
+        flex-wrap: wrap
+        +max($bp-sm)
+            padding: 20px
+            width: 100%
+            justify-content: center
+            gap: 32px
         &-left
             display: flex
             flex-direction: column
             gap: 40px
+            +max($bp-sm)
+                width: 100%
+                justify-content: center
         &-right
             width: 893px
-            display: grid
-            grid-template-columns: repeat(auto-fill, minmax(196px, 1fr))
-            grid-column-gap: 16px
-            grid-row-gap: 15px
+            display: flex
+            gap: 15px
+            flex-wrap: wrap
+            +max($bp-sm)
+                width: 100%
+                justify-content: center
 
     &__search
         display: flex
         gap: 8px
+
         &-input
-            width: 336px
-            padding: 19px 32px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            padding: 0 32px
             border: 1px solid #DBD6D8
             border-radius: 10px
-            color: #000000
-            font-weight: 500
-            font-size: 16px
-            line-height: 22px
-            outline: none
-
-            &::placeholder
+            &-text
                 color: #000000
                 font-weight: 500
                 font-size: 16px
                 line-height: 22px
+                outline: none
+                border: none
+                +max($bp-sm)
+                    width: 100%
 
-            +max($bp-sm)
-                width: 100%
+                &::placeholder
+                    color: #000000
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 22px
+
+            &-icon
+                display: none
+                padding: 10px
+                background: rgba(227, 225, 226, 0.5)
+                border-radius: 8px
+                +max($bp-sm)
+                    display: flex
 
         &-button
             background: $blue
             border-radius: 10px
             padding: 19px 20px
             border: none
+
+    &__categoryMenu
+        display: flex
+        flex-direction: column
+        gap: 24px
+        &-top
+            display: none
+            justify-content: space-between
+            align-items: center
+            +max($bp-sm)
+                display: flex
+
+            &-title
+                font-family: $font-secondary
+                font-weight: 600
+                font-size: 22px
+                line-height: 130%
+                color: #000000
+
+            &-close
+                background: $white
+                padding: 8px
+                border-radius: 8px
+                border: 1px solid #E3E1E2
+                box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
+
+        &-list
+            display: flex
+            flex-direction: column
+
+            &-item
+                width: 100%
+                display: flex
+                flex-direction: row
+                align-items: center
+                padding: 12px 24px
+                gap: 10px
+                height: 53px
+
+                font-family: $font-secondary
+                font-weight: 500
+                font-size: 16px
+                line-height: 180%
+                color: $other_black
+                text-decoration: none
+                +max($bp-sm)
+                    width: 100%
+
+                &:hover
+                    background: rgba(26, 195, 218, 0.1)
+                    border-radius: 10px
+                    color: $blue
+                    transition: all 0.1s ease-in-out

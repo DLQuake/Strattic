@@ -37,9 +37,5 @@ function acf_block_render_callback_Tools($block)
             $counter++;
         }
         $context['args'] = $table;
-        $crumbs[0] = array('link' => home_url(), 'text' => 'Home' );
-        $crumbs[1] = array('link' => home_url().'/help-center/', 'text' => 'Help Center');
-        $crumbs[2] = array('link' => '', 'text' => $category_name);
-        $context['crumbs'] = $crumbs;
     Timber::render('./Tools.block.view.twig', $context);
 }
