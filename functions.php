@@ -44,7 +44,7 @@ ini_set('max_execution_time', '300');
 
 
 function reg_tag() {
-  register_taxonomy_for_object_type('post_tag', 'tools');
+  register_taxonomy_for_object_type('post_tag', 'strattic_tools');
   register_taxonomy_for_object_type('post_tag', 'helpcenter');
   register_taxonomy_for_object_type('post_tag', 'faq');
 }
