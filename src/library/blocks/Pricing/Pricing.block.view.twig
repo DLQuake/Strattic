@@ -1,27 +1,108 @@
 <section class="b-Pricing">
+	<div class="b-Pricing__buttons">
+		{% for item in fields.buttons %}
+			{% if loop.index % 2 == 1 %}
+				<button class="b-Pricing__buttons-button">{{item.button}}</button>
+			{% else %}
+				<button class="b-Pricing__buttons-button b-Pricing__buttons-button--white">{{item.button}}</button>
+			{% endif %}
+		{% endfor %}
+	</div>
 	<div class="b-Pricing__price">
-		<div class="b-Pricing__price-buttons">
-			{% for item in fields.buttons %}
-				{% if loop.index % 2 == 1 %}
-					<button class="b-Pricing__price-buttons-button">{{item.button}}</button>
+		<div class="b-Pricing__price-left">
+			<div class="b-Pricing__price-left-top">
+				<div class="b-Pricing__price-left-top-bigtext">{{fields.pricing.top.bigtext}}</div>
+				<div class="b-Pricing__price-left-top-smalltext">{{fields.pricing.top.smalltext}}</div>
+			</div>
+			<div class="b-Pricing__price-left-bottom">
+				{% for item in fields.pricing.bottom %}
+					<div class="b-Pricing__price-left-bottom-item">{{item.datanames}}</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="b-Pricing__price-right">
+			{% for item in fields.pricing.price %}
+				{% if loop.index == 2 %}
+					<div class="b-Pricing__price-right-item b-Pricing__price-right-item--blueBorder">
+						<div class="b-Pricing__price-right-item-top">
+							<div class="b-Pricing__price-right-item-top-title">
+								<div class="b-Pricing__price-right-item-top-title-bigtext">{{item.top.title.bigtitle}}</div>
+								<div class="b-Pricing__price-right-item-top-title-smalltext">{{item.top.title.smalltitle}}</div>
+							</div>
+							<div class="b-Pricing__price-right-item-top-about">{{item.top.about}}</div>
+						</div>
+
+						<div class="b-Pricing__price-right-item-middle">
+							<div class="b-Pricing__price-right-item-middle-currenncy">
+								<span class="b-Pricing__price-right-item-middle-currenncy-number">{{item.middle.currency.number}}</span>
+								{{item.middle.currency.permonth}}
+							</div>
+							<a class="b-Pricing__price-right-item-middle-link" href="{{item.middle.link.url}}">{{item.middle.link.linktext}}</a>
+						</div>
+
+						<div class="b-Pricing__price-right-item-bottom">
+							{% for data in item.bottom %}
+								<div class="b-Pricing__price-right-item-bottom-datavalue">{{data.datavalues}}</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% elseif loop.last %}
+					<div class="b-Pricing__price-right-item b-Pricing__price-right-item--bluecolor">
+						<div class="b-Pricing__price-right-item-top">
+							<div class="b-Pricing__price-right-item-top-title">
+								<div class="b-Pricing__price-right-item-top-title-bigtext">{{item.top.title.bigtitle}}</div>
+							</div>
+							<div class="b-Pricing__price-right-item-top-about b-Pricing__price-right-item-top-about--white">{{item.top.about}}</div>
+						</div>
+
+						<div class="b-Pricing__price-right-item-middle">
+							<div class="b-Pricing__price-right-item-middle-list">
+								{% for listitem in item.middle.list %}
+									<div class="b-Pricing__price-right-item-middle-list-item">
+										<img class="b-Pricing__price-right-item-middle-list-item-check" src="{{theme.link}}/static/img/check.svg" width="16.67" height="26" alt="check">
+										{{listitem.text}}
+									</div>
+								{% endfor %}
+							</div>
+							<a class="b-Pricing__price-right-item-middle-link b-Pricing__price-right-item-middle-link--white" href="{{item.middle.link.url}}">{{item.middle.link.linktext}}</a>
+						</div>
+
+						<div class="b-Pricing__price-right-item-bottom">
+							{% for data in item.bottom %}
+								<div class="b-Pricing__price-right-item-bottom-datavalue">{{data.datavalues}}</div>
+							{% endfor %}
+						</div>
+					</div>
 				{% else %}
-					<button class="b-Pricing__price-buttons-button b-Pricing__price-buttons-button--white">{{item.button}}</button>
+					<div class="b-Pricing__price-right-item">
+						<div class="b-Pricing__price-right-item-top">
+							<div class="b-Pricing__price-right-item-top-title">
+								<div class="b-Pricing__price-right-item-top-title-bigtext">{{item.top.title.bigtitle}}</div>
+								<div class="b-Pricing__price-right-item-top-title-smalltext">{{item.top.title.smalltitle}}</div>
+							</div>
+							<div class="b-Pricing__price-right-item-top-about">{{item.top.about}}</div>
+						</div>
+
+						<div class="b-Pricing__price-right-item-middle">
+							<div class="b-Pricing__price-right-item-middle-currenncy">
+								<span class="b-Pricing__price-right-item-middle-currenncy-number">{{item.middle.currency.number}}</span>
+								{{item.middle.currency.permonth}}
+							</div>
+							<a class="b-Pricing__price-right-item-middle-link" href="{{item.middle.link.url}}">{{item.middle.link.linktext}}</a>
+						</div>
+
+						<div class="b-Pricing__price-right-item-bottom">
+							{% for data in item.bottom %}
+								<div class="b-Pricing__price-right-item-bottom-datavalue">{{data.datavalues}}</div>
+							{% endfor %}
+						</div>
+					</div>
 				{% endif %}
 			{% endfor %}
 		</div>
-		<div>
-			<div>
-				<div></div>
-				<div></div>
-			</div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
 	</div>
 	<div class="b-Pricing__link">
-		<a class="b-Pricing__link-url" href="#"></a>
+		<a class="b-Pricing__link-url" href="{{fields.link.url}}">{{fields.link.linktext}}</a>
 	</div>
 	<div class="b-Pricing__partners">
 		<div class="b-Pricing__partners-title">
@@ -35,15 +116,29 @@
 		</div>
 	</div>
 	<div class="b-Pricing__faq">
-		<h1>{{fields.question}}</h1>
-		<div class="frequently-asked-questions__questions-item">
-			<div class="frequently-asked-questions__questions-question" id="question1">
-				Do you charge for cases I submitted myself?
-				<span class="frequently-asked-questions__questions-symbol">
-					<img class="b-Pricing__partners-images-image" src="{{image.image}}" alt="image">
-				</span>
-			</div>
-			<div class="frequently-asked-questions__questions-answer" id="answer1"></div>
+		<h1 class="b-Pricing__faq-title">{{fields.faq.title}}</h1>
+		<div class="b-Pricing__faq-questions">
+			{% for item in fields.faq.faq_question %}
+				<div class="b-Pricing__faq-questions-item">
+					<div class="b-Pricing__faq-questions-item-question" id="question{{loop.index}}">
+						{{item.question}}
+						<img class="b-Pricing__faq-questions-item-question-icon" src="{{theme.link}}/static/img/c-add.svg" alt="image">
+					</div>
+					<div class="b-Pricing__faq-questions-item-answer" id="answer{{loop.index}}">{{item.answer}}</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$('.b-Pricing__faq-questions-item-question').on("click", function () {
+		$(this).toggleClass('active');
+	});
+
+	$(document).ready(function () {
+		$("#question1").click(function () { $("#answer1").slideToggle(500); });
+		$("#question2").click(function () { $("#answer2").slideToggle(500); });
+		$("#question3").click(function () { $("#answer3").slideToggle(500); });
+	});
+</script>
