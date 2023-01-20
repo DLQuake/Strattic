@@ -8,7 +8,7 @@ import BurgerMenu from "./modules/BurgerMenu.module";
 import HeaderPrimary from "./modules/HeaderPrimary.module";
 
 $(document).ready(() => {
-  Quote_clients.init()
+  Quote_clients.init();
   BurgerMenu.init();
   HeaderPrimary.init();
 })
