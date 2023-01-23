@@ -7,21 +7,11 @@ function acf_block_render_callback_Tools($block)
     $context = Timber::get_context();
     $context['block'] = $block;
     $context['fields'] = get_fields();
-    $current_category = $_GET['category_name'];
-    if(empty($current_category)){
-        $current_category = null;
-        $category_name = 'All';
-    }
-    else
-    {
-        $category_name = str_replace('-',' ', $current_category);
-        $category_name = strtoupper($category_name);
-    }
+    $context['categories'] = get_categories();
 
     $args = array(
         'post_type' => "strattic_tools",
         'orderby'        => 'rand',
-        'category_name' => $current_category,
         'post_status' => array('publish')
         );
         $args = new WP_Query( $args );

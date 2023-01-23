@@ -6,7 +6,7 @@
     justify-content: center
     align-items: center
     gap: 85px
-    +max($bp-sm)
+    +max($bp-lg)
         padding: 0 20px 100px 20px
 
     &__buttons
@@ -52,16 +52,15 @@
         justify-content: space-between
         gap: 51px
         font-family: $font-secondary
-        +max($bp-sm)
+        +max(920px)
             flex-direction: column
 
         &-left
             display: flex
             flex-direction: column
-            gap: 243px
-            width: 202px
+            gap: 317px
             height: 662px
-            +max($bp-sm)
+            +max(920px)
                 width: 100%
                 align-items: center
                 text-align: center
@@ -91,7 +90,7 @@
                 align-items: flex-start
                 padding: 0px
                 gap: 4px
-                +max($bp-sm)
+                +max(920px)
                     display: none
 
                 &-item
@@ -108,7 +107,7 @@
         &-right
             display: flex
             gap: 16px
-            +max($bp-sm)
+            +max(920px)
                 flex-direction: column
                 width: 100%
 
@@ -317,6 +316,8 @@
             grid-row-gap: 10em
 
             &-image
+                width: auto
+                height: auto
                 filter: invert(30%)
 
     &__faq
