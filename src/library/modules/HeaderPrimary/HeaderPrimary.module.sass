@@ -5,6 +5,15 @@
 	justify-content: center
 	align-items: center
 	gap: 53px
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+	transition: background-color 0.3s linear
+
+	&.-scroll
+		background-color: #2F395A
+		height: 115px
 
 	&__rectangle
 		+max(1066px)
