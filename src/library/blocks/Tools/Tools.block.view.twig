@@ -31,7 +31,10 @@
 					<img src="{{theme.link}}/static/img/burger-menu-close.svg" width="42" height="42" alt="Close menu" class="b-Tools__categoryMenu-top-close">
 				</div>
 				<ul class="b-Tools__categoryMenu-list">
-					<li><a class="b-Tools__categoryMenu-list-item" href="#">Featured</a></li>
+					{% for category in categories %}
+						<li><a class="b-Tools__categoryMenu-list-item" href="#">{{category.name}}</a></li>
+					{% endfor %}
+					{# <li><a class="b-Tools__categoryMenu-list-item" href="#">Featured</a></li>
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">Anlytics</a></li>
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">Comments</a></li>
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">Ecommerce</a></li>
@@ -43,7 +46,7 @@
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">Memberships</a></li>
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">Search</a></li>
 					<li><a class="b-Tools__categoryMenu-list-item" href="#">SEO</a></li>
-					<li><a class="b-Tools__categoryMenu-list-item" href="#">Surveys</a></li>
+					<li><a class="b-Tools__categoryMenu-list-item" href="#">Surveys</a></li> #}
 				</ul>
 			</div>
 

@@ -111,7 +111,7 @@
 		</div>
 		<div class="b-Pricing__partners-images">
 			{% for image in fields.partners.partner %}
-				<img class="b-Pricing__partners-images-image" src="{{image.image}}" alt="image">
+				<img class="b-Pricing__partners-images-image" src="{{image.image}}" width="154" height="51" alt="image">
 			{% endfor %}
 		</div>
 	</div>
@@ -122,7 +122,7 @@
 				<div class="b-Pricing__faq-questions-item">
 					<div class="b-Pricing__faq-questions-item-question" id="question{{loop.index}}">
 						{{item.question}}
-						<img class="b-Pricing__faq-questions-item-question-icon" src="{{theme.link}}/static/img/c-add.svg" alt="image">
+						<img class="b-Pricing__faq-questions-item-question-icon" src="{{theme.link}}/static/img/c-add.svg" width="21" height="36.39" alt="image">
 					</div>
 					<div class="b-Pricing__faq-questions-item-answer" id="answer{{loop.index}}">{{item.answer}}</div>
 				</div>

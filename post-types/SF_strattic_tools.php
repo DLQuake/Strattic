@@ -3,7 +3,7 @@
 
 class SF_strattic_tools extends SF_abstract_post
 {
-  public static $name = 'Strattic_tools';
+  public static $name = 'Strattic tools';
   public static $slug = 'strattic_tools';
 
   public function createPost()
