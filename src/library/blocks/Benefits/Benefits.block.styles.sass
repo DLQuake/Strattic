@@ -4,18 +4,20 @@
     flex-direction: column
     gap: 141px
     margin: 145px 0
+    padding: 0 20px
 
     &__flex
         display: flex
-        flex-direction: row
         align-items: center
-        justify-content: center
-        flex-wrap: wrap-reverse
-        gap: 166px
+        justify-content: space-around
+        +max($bp-sm)
+            flex-direction: column-reverse
+
 
         &--reverse
-            flex-wrap: wrap-reverse
             flex-direction: row-reverse
+            +max($bp-sm)
+                flex-direction: column-reverse
 
         &-icon
             width: 64px
@@ -24,7 +26,7 @@
             padding: 20px
 
         &-text
-            width: 489px
+            width: 30%
             height: auto
             display: flex
             justify-content: center
@@ -76,6 +78,7 @@
                     transition: all 0.3s ease-in-out
 
         &-image
+            width: 40%
             height: auto
             +max($bp-sm)
                 width: 100%

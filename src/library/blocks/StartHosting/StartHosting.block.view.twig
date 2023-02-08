@@ -1,0 +1,13 @@
+<style>
+	.b-StartHosting__container {
+		background-image: url({{fields.background.url}});
+	}
+</style>
+<section class="b-StartHosting">
+	<div class="b-StartHosting__container">
+		<h1 class="b-StartHosting__container-text">{{fields.text}}</h1>
+		{% for item in fields.button %}
+			<a class="b-StartHosting__container-link" href="{{item.link}}">{{item.linktext}}</a>
+		{% endfor %}
+	</div>
+</section>

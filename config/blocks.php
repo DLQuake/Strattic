@@ -19,6 +19,10 @@ $config['gutenberg_blocks'] = [
       'name' => 'LearnMore',
       'title' => 'LearnMore,'
     ],
+    'StartHosting' => [
+      'name' => 'StartHosting',
+      'title' => 'StartHosting,'
+    ],
     'Title' => [
       'name' => 'Title',
       'title' => 'Title,'
@@ -50,6 +54,10 @@ $config['gutenberg_blocks'] = [
     'Pricing' => [
       'name' => 'Pricing',
       'title' => 'Pricing,'
+    ],
+    'GettingStarted' => [
+      'name' => 'GettingStarted',
+      'title' => 'GettingStarted,'
     ],
   ]
 ];

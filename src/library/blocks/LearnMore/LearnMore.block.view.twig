@@ -1,8 +1,3 @@
-<style>
-	.b-LearnMore__starthosting {
-		background-image: url({{fields.background.url}});
-	}
-</style>
 <section class="b-LearnMore">
 	{% if fields.title or fields.subtitle %}
 		<div class="b-LearnMore__title">
@@ -46,10 +41,4 @@
 			{% endfor %}
 		</div>
 	{% endif %}
-
-	<div class="b-LearnMore__starthosting">
-		<h1 class="b-LearnMore__starthosting-text">{{fields.starthosting.bigtext}}</h1>
-		<a class="b-LearnMore__starthosting-link" href="{{fields.starthosting.link}}">{{fields.starthosting.linktext}}</a>
-	</div>
-
 </section>

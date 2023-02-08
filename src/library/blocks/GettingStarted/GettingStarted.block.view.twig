@@ -1,0 +1,57 @@
+<section class="b-GettingStarted">
+	{% for item in fields.instrunctions %}
+		{% if loop.index % 2 == 1 %}
+			<div class="b-GettingStarted__container">
+				<div class="b-GettingStarted__container-title">
+					<h1 class="b-GettingStarted__container-title-text">{{item.title}}</h1>
+					<div class="b-GettingStarted__container-title-number">{{loop.index}}</div>
+				</div>
+				{% for instruction in item.content %}
+					{% if loop.index % 2 == 1 %}
+						<div class="b-GettingStarted__container-flex">
+							<div class="b-GettingStarted__container-flex-text">
+								<h1 class="b-GettingStarted__container-flex-text-big">{{instruction.text.bigtext}}</h1>
+								<p class="b-GettingStarted__container-flex-text-small">{{instruction.text.smalltext}}</p>
+							</div>
+							<img class="b-GettingStarted__container-flex-image" src="{{instruction.image}}" width="623" height="551" alt="ilustration">
+						</div>
+					{% else %}
+						<div class="b-GettingStarted__container-flex b-GettingStarted__container-flex--reverse">
+							<div class="b-GettingStarted__container-flex-text">
+								<h1 class="b-GettingStarted__container-flex-text-big">{{instruction.text.bigtext}}</h1>
+								<p class="b-GettingStarted__container-flex-text-small">{{instruction.text.smalltext}}</p>
+							</div>
+							<img class="b-GettingStarted__container-flex-image" src="{{instruction.image}}" width="623" height="551" alt="ilustration">
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<div class="b-GettingStarted__container">
+				<div class="b-GettingStarted__container-title">
+					<h1 class="b-GettingStarted__container-title-text">{{item.title}}</h1>
+					<div class="b-GettingStarted__container-title-number">{{loop.index}}</div>
+				</div>
+				{% for instruction in item.content %}
+					{% if loop.index % 2 == 0 %}
+						<div class="b-GettingStarted__container-flex">
+							<div class="b-GettingStarted__container-flex-text">
+								<h1 class="b-GettingStarted__container-flex-text-big">{{instruction.text.bigtext}}</h1>
+								<p class="b-GettingStarted__container-flex-text-small">{{instruction.text.smalltext}}</p>
+							</div>
+							<img class="b-GettingStarted__container-flex-image" src="{{instruction.image}}" width="623" height="551" alt="ilustration">
+						</div>
+					{% else %}
+						<div class="b-GettingStarted__container-flex b-GettingStarted__container-flex--reverse">
+							<div class="b-GettingStarted__container-flex-text">
+								<h1 class="b-GettingStarted__container-flex-text-big">{{instruction.text.bigtext}}</h1>
+								<p class="b-GettingStarted__container-flex-text-small">{{instruction.text.smalltext}}</p>
+							</div>
+							<img class="b-GettingStarted__container-flex-image" src="{{instruction.image}}" width="623" height="551" alt="ilustration">
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+	{% endfor %}
+</section>
