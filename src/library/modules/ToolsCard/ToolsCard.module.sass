@@ -5,12 +5,13 @@
   overflow: hidden
   cursor: pointer
   text-decoration: none
-  width: 287px
+  width: 100%
+  height: 300px
   padding: 40px
   border: 1px solid rgba(227, 225, 226, 0.5)
   border-radius: 10px
-  +max($bp-sm)
-    width: 100%
+  +max($bp-xxs)
+    height: auto
     flex-direction: row
 
   &:hover
@@ -22,7 +23,7 @@
     width: 64px
     height: 64px
     margin-bottom: 40px
-    +max($bp-sm)
+    +max($bp-xxs)
       margin-bottom: 0
       margin-right: 22px
 
