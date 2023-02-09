@@ -59,5 +59,9 @@ $config['gutenberg_blocks'] = [
       'name' => 'GettingStarted',
       'title' => 'GettingStarted,'
     ],
+    'Contact' => [
+      'name' => 'Contact',
+      'title' => 'Contact,'
+    ],
   ]
 ];

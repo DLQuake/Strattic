@@ -3,12 +3,7 @@
 		<div class="b-LearnMore__title">
 			{{fields.title}}
 			{% if fields.subtitle %}
-				<div class="b-LearnMore__title-subtitle">
-					{{fields.subtitle.text1}}
-					<a class="b-LearnMore__title-subtitle b-LearnMore__title-subtitle--link" href="{{fields.subtitle.link1.url}}">{{fields.subtitle.link1.linktext}}</a>
-					{{fields.subtitle.text2}}
-					<a class="b-LearnMore__title-subtitle b-LearnMore__title-subtitle--link" href="{{fields.subtitle.link2.url}}">{{fields.subtitle.link2.linktext}}</a>
-				</div>
+				<div class="b-LearnMore__title-subtitle">{{fields.subtitle}}</div>
 			{% endif %}
 		</div>
 	{% endif %}

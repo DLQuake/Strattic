@@ -1,0 +1,120 @@
+.b-Contact
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 48px
+    padding: 200px 0 129px 0
+    font-family: $font-secondary
+    background-repeat: no-repeat
+    background-size: cover
+
+    &__title
+        width: 83%
+        display: flex
+        justify-content: center
+        gap: 40px
+        +max($bp-xxlg)
+            margin-bottom: 85px
+        +max($bp-sm)
+            margin: 0
+            flex-direction: column-reverse
+
+        &-text
+            display: flex
+            flex-direction: column
+            text-align: center
+            gap: 25px
+            color: #000000
+            font-family: $font-secondary
+            font-weight: 600
+            font-size: 64px
+            line-height: 120%
+            +max(320px)
+                font-size: 40px
+            +max($bp-sm)
+                justify-content: center
+                align-items: center
+                margin-bottom: 50px
+                text-align: center
+            +max($bp-xs)
+                margin-bottom: 45px
+
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 48px
+        width: 60%
+        padding: 80px 100px
+        background: $white
+        box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
+        border-radius: 16px
+        +max($bp-sm)
+            width: 90%
+            padding: 40px 20px
+
+        &-text
+            width: 70%
+            font-weight: 400
+            font-size: 20px
+            line-height: 170%
+            text-align: center
+            color: #2F3A5F
+
+        &-form
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 48px
+
+            &-inputs
+                display: flex
+                justify-content: space-around
+                flex-wrap: wrap
+                gap: 16px
+
+                &-input
+                    width: 100%
+                    padding: 17px 24px
+                    border: 1px solid #DBD6D8
+                    border-radius: 10px
+                    outline: none
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 22px
+                    color: #000000
+
+                    &::placeholder
+                        font-family: $font-secondary
+                        color: #000000
+
+                    &--textarea
+                        width: 100%
+                        resize: none
+                        font-family: $font-secondary
+
+                    &--select
+                        appearance: none
+                        -moz-appearance: none
+                        -webkit-appearance: none
+                        background: url(../img/down-arrow.svg) 97% center no-repeat !important
+
+                    &-option
+                        font-family: $font-secondary
+                        color: #000000
+
+            &-submit
+                font-weight: 600
+                font-size: 18px
+                line-height: 22px
+                text-align: center
+                letter-spacing: -0.01em
+                color: #FFFFFF
+                padding: 21px 48px
+                background: $red
+                border: none
+                border-radius: 10px

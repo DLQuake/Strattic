@@ -1,0 +1,29 @@
+<style>
+	.b-Contact {
+		background-image: url({{fields.background.url}});
+	}
+</style>
+<section class="b-Contact">
+	<div class="b-Contact__title">
+		<div class="b-Contact__title-text">{{fields.title}}</div>
+	</div>
+
+	<div class="b-Contact__container">
+		<div class="b-Contact__container-text">{{fields.text}}</div>
+		<form action="Send" method="post" class="b-Contact__container-form">
+			<div class="b-Contact__container-form-inputs">
+				<input class="b-Contact__container-form-inputs-input" type="text" placeholder="Name*">
+				<input class="b-Contact__container-form-inputs-input" type="email" placeholder="Email*">
+				<select class="b-Contact__container-form-inputs-input b-Contact__container-form-inputs-input--select">
+					<option class="b-Contact__container-form-inputs-input-option" value="0">Department*</option>
+					<option class="b-Contact__container-form-inputs-input-option" value="1">daw</option>
+					<option class="b-Contact__container-form-inputs-input-option" value="2">daw</option>
+					<option class="b-Contact__container-form-inputs-input-option" value="3">dwa</option>
+				</select>
+				<input class="b-Contact__container-form-inputs-input" type="tel" placeholder="Phone">
+				<textarea class="b-Contact__container-form-inputs-input b-Contact__container-form-inputs-input--textarea" cols="30" rows="10" placeholder="Message*"></textarea>
+			</div>
+			<button class="b-Contact__container-form-submit" type="submit">Send message</button>
+		</form>
+	</div>
+</section>
