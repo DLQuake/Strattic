@@ -1,0 +1,13 @@
+<style>
+	.b-Investors {
+		background-image: url({{fields.background.url}});
+	}
+</style>
+<div class="b-Investors">
+	<div class="b-Investors__title">{{fields.title}}</div>
+	<div class="b-Investors__images">
+		{% for image in fields.investors %}
+			<img class="b-Investors__images-image" src="{{image.investor}}" width="161" height="37" alt="image">
+		{% endfor %}
+	</div>
+</div>

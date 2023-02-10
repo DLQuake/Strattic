@@ -63,5 +63,13 @@ $config['gutenberg_blocks'] = [
       'name' => 'Contact',
       'title' => 'Contact,'
     ],
+    'Investors' => [
+      'name' => 'Investors',
+      'title' => 'Investors,'
+    ],
+    'Team' => [
+      'name' => 'Team',
+      'title' => 'Team,'
+    ],
   ]
 ];

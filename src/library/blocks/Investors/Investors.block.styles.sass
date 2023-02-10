@@ -1,0 +1,32 @@
+.b-Investors
+    padding: 129px 60px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-repeat: no-repeat
+    background-size: cover
+
+    &__title
+        width: 100%
+        font-weight: 600
+        font-size: 40px
+        line-height: 130%
+        margin-bottom: 90px
+        text-align: center
+        +max(320px)
+            font-size: 40px
+
+    &__images
+        width: 100%
+        display: grid
+        place-items: center
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        grid-template-rows: 1fr
+        grid-column-gap: 48px
+        grid-row-gap: 10em
+
+        &-image
+            width: auto
+            height: auto

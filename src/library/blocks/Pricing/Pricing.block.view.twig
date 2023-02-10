@@ -2,9 +2,9 @@
 	<div class="b-Pricing__buttons">
 		{% for item in fields.buttons %}
 			{% if loop.index % 2 == 1 %}
-				<button class="b-Pricing__buttons-button">{{item.button}}</button>
+				<button class="b-Pricing__buttons-button b-Pricing__buttons-button--white active">{{item.button}}</button>
 			{% else %}
-				<button class="b-Pricing__buttons-button b-Pricing__buttons-button--white">{{item.button}}</button>
+				<button class="b-Pricing__buttons-button">{{item.button}}</button>
 			{% endif %}
 		{% endfor %}
 	</div>
@@ -33,8 +33,8 @@
 						</div>
 
 						<div class="b-Pricing__price-right-item-middle">
-							<div class="b-Pricing__price-right-item-middle-currenncy">
-								<span class="b-Pricing__price-right-item-middle-currenncy-number">{{item.middle.currency.number}}</span>
+							<div class="b-Pricing__price-right-item-middle-currency">
+								<span class="b-Pricing__price-right-item-middle-currency-number">{{item.middle.currency.number}}</span>
 								{{item.middle.currency.permonth}}
 							</div>
 							<a class="b-Pricing__price-right-item-middle-link" href="{{item.middle.link.url}}">{{item.middle.link.linktext}}</a>
@@ -84,8 +84,8 @@
 						</div>
 
 						<div class="b-Pricing__price-right-item-middle">
-							<div class="b-Pricing__price-right-item-middle-currenncy">
-								<span class="b-Pricing__price-right-item-middle-currenncy-number">{{item.middle.currency.number}}</span>
+							<div class="b-Pricing__price-right-item-middle-currency">
+								<span class="b-Pricing__price-right-item-middle-currency-number">{{item.middle.currency.number}}</span>
 								{{item.middle.currency.permonth}}
 							</div>
 							<a class="b-Pricing__price-right-item-middle-link" href="{{item.middle.link.url}}">{{item.middle.link.linktext}}</a>
