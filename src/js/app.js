@@ -8,6 +8,7 @@ import FAQ from "./blocks/FAQ.block";
 import BurgerMenu from "./modules/BurgerMenu.module";
 import HeaderPrimary from "./modules/HeaderPrimary.module";
 import HeaderSecondary from "./modules/HeaderSecondary.module";
+import Pricing from "./blocks/Pricing.block";
 
 $(document).ready(() => {
   Quote_clients.init();
@@ -15,4 +16,5 @@ $(document).ready(() => {
   BurgerMenu.init();
   HeaderPrimary.init();
   HeaderSecondary.init();
+  Pricing.init();
 })
