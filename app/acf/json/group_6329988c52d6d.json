@@ -40,7 +40,7 @@
                     "key": "field_6332b905d8703",
                     "label": "SmallText",
                     "name": "smalltext",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -50,10 +50,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_6332b92ed8705",
@@ -224,5 +224,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674201507
+    "modified": 1676033679
 }
