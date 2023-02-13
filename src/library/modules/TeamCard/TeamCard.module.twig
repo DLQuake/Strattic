@@ -3,7 +3,7 @@
 		<source srcset="{{image|resize(imageWidthNormal, imageHeightNormal, "center")}}" media="(min-width: 480px)">
 		<source srcset="{{image|resize(imageWidthSmall, imageHeightSmall, "center")}}">
 	</picture>
-	<img class="m-TeamCard__img" src="{{image|resize(imageWidthNormal, imageHeightNormal, "center")}}" alt="{{imageAlt}}" width="275" height="275"/>
+	<img class="m-TeamCard__img" src="{{image|resize(imageWidthNormal, imageHeightNormal, "center")}}" alt="{{imageAlt}}" width="320" height="320"/>
 
 
 	<div class="m-TeamCard__box {% if textLayout == " onlyTitle" %}-onlyTitle {% elseif textLayout == " titleText" %}-titleText {% elseif textLayout == " texttitle" %}-texttitle{% endif %}">
