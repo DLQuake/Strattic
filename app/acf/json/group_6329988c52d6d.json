@@ -3,6 +3,25 @@
     "title": "Block Welcome",
     "fields": [
         {
+            "key": "field_63e9e228b947a",
+            "label": "White or Black Title",
+            "name": "white_or_black_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_632998999afb4",
             "label": "Title",
             "name": "title",
@@ -224,5 +243,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1676033679
+    "modified": 1676272417
 }

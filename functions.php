@@ -31,6 +31,7 @@ require_once("post-types/SF_strattic_tools.php");
 require_once("post-types/SF_help_center.php");
 require_once("post-types/SF_faq.php");
 require_once("post-types/SF_team.php");
+require_once("post-types/SF_job_offers.php");
 
 
 ini_set('upload_max_size', '64M');
@@ -49,6 +50,7 @@ function reg_tag() {
   register_taxonomy_for_object_type('post_tag', 'helpcenter');
   register_taxonomy_for_object_type('post_tag', 'faq');
   register_taxonomy_for_object_type('post_tag', 'team');
+  register_taxonomy_for_object_type('post_tag', 'joboffers');
 }
 add_action('init', 'reg_tag');
 
