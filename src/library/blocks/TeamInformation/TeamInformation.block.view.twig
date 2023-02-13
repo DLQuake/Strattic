@@ -1,0 +1,19 @@
+<section class="b-TeamInformation">
+	<div class="b-TeamInformation__container">
+		<img class="b-TeamInformation__container-img" src="{{fields.image}}" alt="Person" width="320" height="320"/>
+		<div class="b-TeamInformation__container-content">
+			<div class="b-TeamInformation__container-title">
+				<h1 class="b-TeamInformation__container-content-title-name">{{fields.content.name_and_surname}}</h1>
+				<h2 class="b-TeamInformation__container-content-title-position">{{fields.content.company_position}}</h2>
+			</div>
+			<div class="b-TeamInformation__container-content-socialmedia">
+				{% for item in fields.content.socialmedia %}
+					<a class="b-TeamInformation__container-content-socialmedia-link" href="{{item.link}}">
+						<img class="b-TeamInformation__container-content-socialmedia-icon" src="{{item.icon}}" alt="Person" width="16" height="16"/>
+					</a>
+				{% endfor %}
+			</div>
+			<div class="b-TeamInformation__container-content-text">{{fields.content.text}}</div>
+		</div>
+	</div>
+</section>

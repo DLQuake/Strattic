@@ -1,0 +1,15 @@
+<div class="b-JobOffersInformation">
+	<div class="b-JobOffersInformation__container">
+		{% include "modules/Breadcrumbs/Breadcrumbs.module.twig" with {
+			size: "big",
+			crumbs: crumbs,
+		}%}
+		<div class="b-JobOffersInformation__list">
+			<div class="b-JobOffersInformation__list-title">{{fields.title}}</div>
+			<div class="b-JobOffersInformation__list-offer">{{fields.content}}</div>
+			<div class="b-JobOffersInformation__list-button">
+				<a class="b-JobOffersInformation__list-button-link" href="{{fields.button.url}}">{{fields.button.linktext}}</a>
+			</div>
+		</div>
+	</div>
+</div>

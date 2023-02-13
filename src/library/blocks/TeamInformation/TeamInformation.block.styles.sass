@@ -1,0 +1,68 @@
+.b-TeamInformation
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 141px
+    margin-top: 134px
+    margin-bottom: 94px
+    padding: 0 40px
+    +max($bp-sm)
+        margin-top: 0
+
+    &__container
+        display: flex
+        justify-content: center
+        gap: 80px
+        +max(656px)
+            flex-direction: column
+            align-items: center
+
+        &-img
+            background: linear-gradient(180.63deg, #FAFAFA 0.35%, #E9E7E8 99.27%)
+            border-radius: 200px
+            +max(320px)
+                width: 100%
+                height: auto
+
+        &-content
+            width: 43%
+            display: flex
+            flex-direction: column
+            gap: 30px
+            font-family: $font-secondary
+            +max(656px)
+                width: 100%
+                text-align: center
+                align-items: center
+
+            &-title
+                &-name
+                    font-weight: 600
+                    font-size: 40px
+                    line-height: 130%
+                    color: #000000
+
+                &-position
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 170%
+                    color: $red
+
+            &-socialmedia
+                display: flex
+                gap: 4px
+
+                &-link
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 100%
+                    padding: 16px
+                    border: 1px solid #EAE8EA
+                    background: transparent
+
+            &-text
+                font-weight: 400
+                font-size: 18px
+                line-height: 170%
+                color: #2F3A5F

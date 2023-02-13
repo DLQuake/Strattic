@@ -5,13 +5,23 @@
 </style>
 <div class="b-Welcome">
 	<div class="b-Welcome__title">
-		<div class="b-Welcome__title-text">
-			<div class="b-Welcome__title-text-big">{{fields.title.bigtext}}</div>
-			<div class="b-Welcome__title-text-small">{{fields.title.smalltext}}</div>
-			{% if fields.title.button %}
-				<a class="b-Welcome__title-text-button" id="feature0" href="#Tofeature">{{fields.title.button}}</a>
-			{% endif %}
-		</div>
+		{% if fields.white_or_black_title %}
+			<div class="b-Welcome__title-text">
+				<div class="b-Welcome__title-text-big">{{fields.title.bigtext}}</div>
+				<div class="b-Welcome__title-text-small">{{fields.title.smalltext}}</div>
+				{% if fields.title.button %}
+					<a class="b-Welcome__title-text-button" href="#">{{fields.title.button}}</a>
+				{% endif %}
+			</div>
+		{% else %}
+			<div class="b-Welcome__title-text">
+				<div class="b-Welcome__title-text-big b-Welcome__title-text-big--black">{{fields.title.bigtext}}</div>
+				<div class="b-Welcome__title-text-small b-Welcome__title-text-small--black">{{fields.title.smalltext}}</div>
+				{% if fields.title.button %}
+					<a class="b-Welcome__title-text-button" href="#">{{fields.title.button}}</a>
+				{% endif %}
+			</div>
+		{% endif %}
 		{% if fields.title.image %}
 			<div class="b-Welcome__title-image">
 				<img class="b-Welcome__title-image" src="{{fields.title.image}}" width="574" height="510.68" alt="laptop">
