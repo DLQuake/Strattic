@@ -1,0 +1,25 @@
+<section class="b-Features">
+	<div class="b-Features__container">
+		{% if fields.types  %}
+			<div class="b-Features__types">
+				{% for item in fields.types %}
+					<div class="b-Features__types-type">
+						<img class="b-Features__types-type-icon" src="{{item.type.icon}}" alt="Icon">
+						<div class="b-Features__types-type-text">{{item.type.text}}</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		<div class="b-Features__features">
+			{% for item in fields.features %}
+				{% include "modules/FeaturesCard/FeaturesCard.module.twig" with {
+					icon: item.icon,
+					type: item.content.type,
+					title: item.content.title,
+					text: item.content.text,
+				}%}
+			{% endfor %}
+		</div>
+	</div>
+</section>

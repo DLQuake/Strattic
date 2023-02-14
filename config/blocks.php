@@ -83,5 +83,9 @@ $config['gutenberg_blocks'] = [
       'name' => 'JobOffersInformation',
       'title' => 'JobOffersInformation,'
     ],
+    'Features' => [
+      'name' => 'Features',
+      'title' => 'Features,'
+    ],
   ]
 ];

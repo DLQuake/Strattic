@@ -29,6 +29,12 @@
             text-align: center
             color: $white
 
+        &-links
+            display: flex
+            gap: 8px
+            +max(425px)
+                flex-direction: column
+
         &-link
             font-family: $font-secondary
             font-weight: 600
@@ -41,6 +47,9 @@
             border-radius: 10px
             color: $white
             background: $red
+            display: flex
+            justify-content: center
+            align-items: center
 
             &:hover
                 background-color: #FA292F
