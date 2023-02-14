@@ -1,0 +1,57 @@
+.m-FeaturesCard
+    width: 49%
+    display: flex
+    gap: 29px
+    padding: 55px 65px 70px 52px
+    border-radius: 16px
+    +max($bp-sm)
+        width: 100%
+    +max(425px)
+        flex-direction: column
+
+    &:hover
+        background: #FFFFFF
+        box-shadow: 0px 24px 100px -8px rgba(0, 0, 0, 0.1)
+
+    &:hover &__icon
+        transition: all 0.3s ease-in-out
+        background: $blue
+
+    &:hover &__icon-image
+        transition: all 0.3s ease-in-out
+        filter: brightness(0) invert(1)
+
+    &__icon
+        padding: 20px
+        background: linear-gradient(180.63deg, #FAFAFA 0.35%, #E9E7E8 99.27%)
+        border-radius: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 64px
+        +max(425px)
+            width: 64px
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+        &-type
+            font-weight: 700
+            font-size: 14px
+            line-height: 180%
+            color: $blue
+
+        &-title
+            font-family: $font-secondary
+            font-weight: 600
+            font-size: 28px
+            line-height: 130%
+            color: #000000
+
+        &-text
+            font-family: $font-secondary
+            font-weight: 400
+            font-size: 18px
+            line-height: 170%
+            color: #2F3A5F
