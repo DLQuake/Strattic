@@ -1,5 +1,5 @@
 <div class="m-HeaderPrimary">
-	<div class="m-HeaderPrimary__container" data-aos="fade-left">
+	<div class="m-HeaderPrimary__container">
 		<div class="m-HeaderPrimary__container-left">
 			<a href="/">
 				<img src="{{theme.link}}/static/img/logo.svg" width="211" height="47" alt="Strattic" class="m-HeaderPrimary__logo"/>
@@ -44,14 +44,13 @@
 		</div>
 
 		<div class="m-HeaderPrimary__container-right">
-			<a class="m-HeaderPrimary__link" href="#">Login</a>
-			<a class="m-HeaderPrimary__link m-HeaderPrimary__link--red" href="#">Get started</a>
+			<a class="m-HeaderPrimary__link" href="/signin">Login</a>
+			<a class="m-HeaderPrimary__link m-HeaderPrimary__link--red" href="/signup">Get started</a>
 			<div class="m-HeaderPrimary__menu -mobile">
 				{% include "modules/BurgerMenu/BurgerMenu.module.twig" with {
-						stickColor: "white"
-					}%}
+					stickColor: "white"
+				}%}
 			</div>
 		</div>
-
 	</div>
 </div>
