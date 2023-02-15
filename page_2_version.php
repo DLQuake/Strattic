@@ -7,7 +7,7 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists
  *
- * Template Name: Default template with black header
+ * Template Name: Default template - 2 version
  *
  * @package 	WordPress
  * @subpackage 	Timber
@@ -18,7 +18,7 @@ use Timber\Post;
 use Timber\Timber;
 
 $context = Timber::get_context();
-$templates = array('pages/page_black_header/page_black_header.twig');
+$templates = array('pages/page_2_version/page_2_version.twig');
 $post = new Post();
 $context['post'] = $post;
 Timber::render($templates, $context);
