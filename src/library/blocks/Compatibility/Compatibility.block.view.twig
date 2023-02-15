@@ -1,0 +1,21 @@
+<section class="b-Compatibility">
+	{% for item in fields.compatibility %}
+		{% if loop.index % 2 == 0 %}
+			<div class="b-Compatibility__container b-Compatibility__container--reverse">
+				<div class="b-Compatibility__container-content">
+					<h1 class="b-Compatibility__container-content-title">{{item.content.title}}</h1>
+					<div class="b-Compatibility__container-content-text">{{item.content.text}}</div>
+				</div>
+				<img class="b-Compatibility__container-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
+			</div>
+		{% else %}
+			<div class="b-Compatibility__container">
+				<div class="b-Compatibility__container-content">
+					<h1 class="b-Compatibility__container-content-title">{{item.content.title}}</h1>
+					<div class="b-Compatibility__container-content-text">{{item.content.text}}</div>
+				</div>
+				<img class="b-Compatibility__container-image" src="{{item.image}}" width="618" height="561" alt="ilustration">
+			</div>
+		{% endif %}
+	{% endfor %}
+</section>

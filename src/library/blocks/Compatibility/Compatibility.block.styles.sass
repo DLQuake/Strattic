@@ -1,0 +1,68 @@
+.b-Compatibility
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 141px
+    margin: 110px 0
+    padding: 0 20px
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-around
+        +max($bp-sm)
+            flex-direction: column-reverse
+
+        &--reverse
+            flex-direction: row-reverse
+            +max($bp-sm)
+                flex-direction: column-reverse
+
+        &-content
+            width: 30%
+            height: auto
+            display: flex
+            justify-content: center
+            flex-direction: column
+            gap: 30px
+            font-family: $font-secondary
+            +max($bp-sm)
+                align-items: center
+                text-align: center
+                width: 70vw
+                gap: 20px
+
+            &-title
+                width: 496px
+                font-weight: 600
+                font-size: 28px
+                line-height: 130%
+                color: #000000
+                +max($bp-xxlg)
+                    width: 100%
+
+            &-text
+                font-weight: 400
+                font-size: 18px
+                line-height: 170%
+                color: $black
+                display: flex
+                flex-direction: column
+
+            &-text h6
+                font-size: 14px
+                line-height: 170%
+
+            &-text a
+                color: $red
+                text-underline-position: under
+
+                &:hover
+                    color: #FA292F
+                    transition: all 0.3s ease-in-out
+
+        &-image
+            width: 40%
+            height: auto
+            +max($bp-sm)
+                width: 100%

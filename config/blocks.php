@@ -87,5 +87,13 @@ $config['gutenberg_blocks'] = [
       'name' => 'Features',
       'title' => 'Features,'
     ],
+    'Compatibility' => [
+      'name' => 'Compatibility',
+      'title' => 'Compatibility,'
+    ],
+    'WhatIs' => [
+      'name' => 'WhatIs',
+      'title' => 'WhatIs,'
+    ],
   ]
 ];

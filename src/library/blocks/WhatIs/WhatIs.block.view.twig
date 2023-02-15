@@ -1,0 +1,11 @@
+<section class="b-WhatIs">
+	{% for item in fields.whatis %}
+		<div class="b-WhatIs__container">
+			<div class="b-WhatIs__container-content">
+				<h1 class="b-WhatIs__container-content-title">{{item.content.title}}</h1>
+				<div class="b-WhatIs__container-content-text">{{item.content.text}}</div>
+			</div>
+			<img class="b-WhatIs__container-image" src="{{item.image}}" width="1357" height="862" alt="ilustration">
+		</div>
+	{% endfor %}
+</section>
