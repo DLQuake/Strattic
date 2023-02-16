@@ -43,6 +43,20 @@
         border-radius: 10px
         color: $blue
 
+  &.-red
+    background: $red
+    color: $white
+    &:hover
+      background: #FA292F
+      transition: all 0.3s ease-in-out
+
+  &.-blue
+    background: $blue
+    color: $white
+    &:hover
+      background: #17AFC3
+      transition: all 0.3s ease-in-out
+
   &.-other_grey
     color: $other_grey
     &:hover
@@ -51,25 +65,29 @@
         color: $other_grey
 
   &.-small
-    +fslh(13, 22)
-    padding-top: 10px
-    padding-bottom: 10px
-    +max($bp-sm)
-      +fslh(9, 15)
+    border-radius: 10px
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    padding: 12px 24px
+
+  &.-medium
+    border-radius: 10px
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    padding: 13px 32px
 
   &.-big
-    +fslh(24, 24)
-    font-weight: 900
-    font-family: $font-primary
-    padding-top: 18px
-    padding-bottom: 18px
-    letter-spacing: 0
+    border-radius: 10px
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    padding: 17px 44px
 
   &.-large
-    +fslh(28, 61)
-    font-weight: 900
-    font-family: $font-primary
-    letter-spacing: 0
-    border-radius: 81px
-    +max($bp-sm)
-      +fslh(24, 52)
+    border-radius: 10px
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    padding: 21px 48px
